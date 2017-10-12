@@ -66,16 +66,19 @@ public class FighterController : MonoBehaviour {
 		}
 	}
 
+	//TODO: It should be done better later.
 	Vector3 FindFreeSpot(Vector3 mousePos) {
 		Vector3 freeSpot = mousePos;
 		gameController.allUnits.ForEach(unit => {
 			if (unit.transform.position.Equals(freeSpot) && unit.Equals(gameObject) == false) {
+				// temporary solution
 				freeSpot.x++;
 				freeSpot = FindFreeSpot(freeSpot);
 			}
 		});
 		gameController.movePositions.ForEach(position => {
 			if (position.Equals(freeSpot)) {
+				// temporary solution
 				freeSpot.x++;
 				freeSpot = FindFreeSpot(freeSpot);
 			}

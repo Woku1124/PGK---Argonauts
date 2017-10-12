@@ -17,21 +17,27 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// if left mouse button down
 		if (Input.GetMouseButtonDown(0)) {
+			// then select units
 			SelectUnits();
 		}
 	}
 
 	void SelectUnits() {
-		allUnits.ForEach(unit => {
-			Vector3 mousePosition3D = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		// calculationg mouse position in world
+		Vector3 mousePosition3D = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+		// checking all units coordinates in order to select the right ones
+		allUnits.ForEach(unit => {
 			if (Mathf.Abs(mousePosition3D.x - unit.transform.position.x) < 0.5f && 
 				Mathf.Abs(mousePosition3D.y - unit.transform.position.y) < 0.5f) {
 				unit.GetComponent<FighterController>().isSelected = true;
+				// temporary
 				unit.GetComponent<SpriteRenderer>().color = Color.green;
 			} else {
 				unit.GetComponent<FighterController>().isSelected = false;
+				// temporary
 				unit.GetComponent<SpriteRenderer>().color = Color.white;
 			}
 		});
