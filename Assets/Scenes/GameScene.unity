@@ -147,7 +147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654098628
 GameObject:
@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 654098631}
   - component: {fileID: 654098630}
   - component: {fileID: 654098629}
+  - component: {fileID: 654098634}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -238,6 +239,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &654098634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 654098628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5891b56ae12ce9844ba5d294fd107fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollingSpeed: 50
+  moveCameraSpeed: 2
 --- !u!1001 &786501032
 Prefab:
   m_ObjectHideFlags: 0
@@ -315,7 +329,17 @@ Transform:
   m_Father: {fileID: 1703907586}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &889885050
+--- !u!4 &913128000 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4210911880685378, guid: e4b413cbcbdbf2b4fb82f43a65220b6e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2081864300}
+--- !u!4 &1072795357 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4210911880685378, guid: e4b413cbcbdbf2b4fb82f43a65220b6e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1416383719}
+--- !u!1001 &1304113605
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -352,21 +376,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4715420897850632, guid: 3c0a2d311f250a64c931d0df373699f0, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c0a2d311f250a64c931d0df373699f0, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &913128000 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4210911880685378, guid: e4b413cbcbdbf2b4fb82f43a65220b6e,
-    type: 2}
-  m_PrefabInternal: {fileID: 2081864300}
---- !u!4 &1072795357 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4210911880685378, guid: e4b413cbcbdbf2b4fb82f43a65220b6e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1416383719}
 --- !u!1001 &1416383719
 Prefab:
   m_ObjectHideFlags: 0
