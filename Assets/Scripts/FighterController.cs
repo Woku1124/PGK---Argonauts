@@ -9,14 +9,14 @@ public class FighterController : MonoBehaviour {
 
 	private bool isMoving;
 	private Vector3 movePosition;
-	private GameObject gameController;
+	private GameController gameController;
 
 	// Use this for initialization
 	void Start () {
 		isMoving = false;
 		isSelected = false;
 		movePosition = new Vector3();
-		gameController = GameObject.FindGameObjectWithTag("GameController");
+		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
 	// Update is called once per frame
@@ -31,6 +31,7 @@ public class FighterController : MonoBehaviour {
 		if (isMoving && movePosition.Equals(transform.position)) {
 			// that means we are not moving anymore
 			isMoving = false;
+			gameController.movePositions.Remove(movePosition);
 		}
 	}
 
@@ -43,7 +44,13 @@ public class FighterController : MonoBehaviour {
 	void CalculateMovement() {
 		// if right mouse button down
 		if (Input.GetMouseButtonDown(1)) {
-			// then we are moving
+			// if we are already moving
+			if (isMoving) {
+				// then we need to remove current movePosition from collection in GameController
+				gameController.movePositions.Remove(movePosition);
+			}
+
+			// we are moving
 			isMoving = true;
 
 			// calculationg mouse position in world
@@ -55,13 +62,20 @@ public class FighterController : MonoBehaviour {
 
 			// find spot as close to our click as possible but without any units there
 			movePosition = FindFreeSpot(movePosition);
+			gameController.movePositions.Add(movePosition);
 		}
 	}
 
 	Vector3 FindFreeSpot(Vector3 mousePos) {
 		Vector3 freeSpot = mousePos;
-		gameController.GetComponent<GameController>().allUnits.ForEach(unit => {
+		gameController.allUnits.ForEach(unit => {
 			if (unit.transform.position.Equals(freeSpot) && unit.Equals(gameObject) == false) {
+				freeSpot.x++;
+				freeSpot = FindFreeSpot(freeSpot);
+			}
+		});
+		gameController.movePositions.ForEach(position => {
+			if (position.Equals(freeSpot)) {
 				freeSpot.x++;
 				freeSpot = FindFreeSpot(freeSpot);
 			}

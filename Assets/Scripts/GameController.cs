@@ -5,10 +5,12 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
 	public List<GameObject> allUnits;
+	public List<Vector3> movePositions;
 
 	// Use this for initialization
 	void Start () {
 		allUnits = new List<GameObject>();
+		movePositions = new List<Vector3>();
 		// not sure if GameController Start method will always run AFTER creation of all GameObjects
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
 	}
