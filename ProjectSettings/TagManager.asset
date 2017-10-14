@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Space Stations
+    uniqueID: 924543257
+    locked: 0
+  - name: Units
+    uniqueID: 723301973
+    locked: 0
+  - name: SelectRectangle
+    uniqueID: 4207608201
+    locked: 0

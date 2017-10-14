@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
 
+	public GameObject selectRectanglePrefab;
 	public List<GameObject> allUnits;
 	public List<Vector3> movePositions;
 
+	private bool isSelecting;
+	private Vector3 startSelectionMousePosition;
+	private Vector3 endSelectionMousePosition;
+	private Vector3 startSelectRectanglePosition;
+	private Vector3 endSelectRectanglePosition;
+	private GameObject selectRectangle;
+
 	// Use this for initialization
 	void Start () {
+		isSelecting = false;
+
 		allUnits = new List<GameObject>();
 		movePositions = new List<Vector3>();
 		// not sure if GameController Start method will always run AFTER creation of all GameObjects
@@ -19,19 +29,48 @@ public class GameController : MonoBehaviour {
 	void Update () {
 		// if left mouse button down
 		if (Input.GetMouseButtonDown(0)) {
-			// then select units
-			SelectUnits();
+			// then start selecting
+			isSelecting = true;
+			// calculationg mouse position in world
+			startSelectionMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			startSelectionMousePosition.z = 0.0f;
+
+			selectRectangle = GameObject.Instantiate(selectRectanglePrefab, startSelectionMousePosition, new Quaternion());
 		}
+		if (isSelecting) {
+			// calculationg mouse position in world
+			endSelectionMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			// calculating select rectangle coordinates
+			CalculateSelectRectangle();
+
+			// calculating new scale for select rectangle
+			Vector3 newScale = new Vector3(endSelectRectanglePosition.x - startSelectRectanglePosition.x,
+										   endSelectRectanglePosition.y - startSelectRectanglePosition.y,
+										   1.0f);
+			
+			// calculating new position for select rectangle
+			Vector3 newPosition = new Vector3((endSelectRectanglePosition.x + startSelectRectanglePosition.x) * 0.5f,
+				                      		  (endSelectRectanglePosition.y + startSelectRectanglePosition.y) * 0.5f,
+				                      		  0.0f);
+			
+			selectRectangle.transform.localScale = newScale;
+			selectRectangle.transform.localPosition = newPosition;
+
+			if (Input.GetMouseButtonUp(0)) {
+				// then select units
+				SelectUnits();
+
+				isSelecting = false;
+				GameObject.Destroy(selectRectangle);
+			}
+		}
+
 	}
 
 	void SelectUnits() {
-		// calculationg mouse position in world
-		Vector3 mousePosition3D = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
 		// checking all units coordinates in order to select the right ones
 		allUnits.ForEach(unit => {
-			if (Mathf.Abs(mousePosition3D.x - unit.transform.position.x) < 0.5f && 
-				Mathf.Abs(mousePosition3D.y - unit.transform.position.y) < 0.5f) {
+			if (IsInSelectRectangle(unit)) {
 				unit.GetComponent<FighterController>().isSelected = true;
 				// temporary
 				unit.GetComponent<SpriteRenderer>().color = Color.green;
@@ -41,5 +80,66 @@ public class GameController : MonoBehaviour {
 				unit.GetComponent<SpriteRenderer>().color = Color.white;
 			}
 		});
+	}
+
+	void CalculateSelectRectangle() {
+		float greaterX, greaterY, lowerX, lowerY;
+		greaterX = Mathf.Max(startSelectionMousePosition.x, endSelectionMousePosition.x);
+		greaterY = Mathf.Max(startSelectionMousePosition.y, endSelectionMousePosition.y);
+		lowerX = Mathf.Min(startSelectionMousePosition.x, endSelectionMousePosition.x);
+		lowerY = Mathf.Min(startSelectionMousePosition.y, endSelectionMousePosition.y);
+		// left bottom corner of select rectangle
+		startSelectRectanglePosition.Set(lowerX, lowerY, 0.0f);
+		// right top corner of select rectangle
+		endSelectRectanglePosition.Set(greaterX, greaterY, 0.0f);
+	}
+
+	bool IsInSelectRectangle(GameObject unit) {
+		float unitSize = unit.GetComponent<FighterController>().Size;
+		Vector3 leftBottom = new Vector3(unit.transform.position.x - unitSize, unit.transform.position.y - unitSize, 0.0f);
+		Vector3 leftTop = new Vector3(unit.transform.position.x - unitSize, unit.transform.position.y + unitSize, 0.0f);
+		Vector3 rightBottom = new Vector3(unit.transform.position.x + unitSize, unit.transform.position.y - unitSize, 0.0f);
+		Vector3 rightTop = new Vector3(unit.transform.position.x + unitSize, unit.transform.position.y + unitSize, 0.0f);
+
+		// if place where we started select rectangle is on given unit
+		if (IsBetweenTwoVectors(startSelectionMousePosition, leftBottom, rightTop)) {
+			return true;
+		}
+		// if place where we ended select rectangle is on given unit
+		if (IsBetweenTwoVectors(endSelectionMousePosition, leftBottom, rightTop)) {
+			return true;
+		}
+
+		// if any corner of given unit is within select rectangle
+		// leftBottom corner
+		if (IsBetweenTwoVectors(leftBottom, startSelectRectanglePosition, endSelectRectanglePosition)) {
+			return true;
+		}
+		// leftTop corner
+		if (IsBetweenTwoVectors(leftTop, startSelectRectanglePosition, endSelectRectanglePosition)) {
+			return true;
+		}
+		// rightBottom corner
+		if (IsBetweenTwoVectors(rightBottom, startSelectRectanglePosition, endSelectRectanglePosition)) {
+			return true;
+		}
+		// rightTop corner
+		if (IsBetweenTwoVectors(rightTop, startSelectRectanglePosition, endSelectRectanglePosition)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	bool IsBetweenTwoVectors(Vector3 checkVector, Vector3 firstVector, Vector3 secondVector) {
+		return IsInRange(checkVector.x, firstVector.x, secondVector.x)
+			&& IsInRange(checkVector.y, firstVector.y, secondVector.y);
+	}
+
+	bool IsInRange(float number, float startRange, float endRange) {
+		if (number >= startRange && number <= endRange) {
+			return true;
+		}
+		return false;
 	}
 }
