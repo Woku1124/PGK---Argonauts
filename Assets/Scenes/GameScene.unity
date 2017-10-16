@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfca96b2f8f96047a411f0311e8e57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaceStation: {fileID: 1304113606}
   selectRectanglePrefab: {fileID: 1750285808482956, guid: 618358b70cb935049ba6b6b237bb94e0,
     type: 2}
   allUnits: []
@@ -432,6 +433,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c0a2d311f250a64c931d0df373699f0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1304113606 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1353892688385978, guid: 3c0a2d311f250a64c931d0df373699f0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1304113605}
 --- !u!1001 &1416383719
 Prefab:
   m_ObjectHideFlags: 0

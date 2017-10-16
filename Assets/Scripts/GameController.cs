@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	private Vector3 startSelectRectanglePosition;
 	private Vector3 endSelectRectanglePosition;
 	private GameObject selectRectangle;
+	private GameObject spaceStation;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour {
 		movePositions = new List<Vector3>();
 		// not sure if GameController Start method will always run AFTER creation of all GameObjects
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
+		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
 	}
 	
 	// Update is called once per frame
@@ -68,18 +70,39 @@ public class GameController : MonoBehaviour {
 	}
 
 	void SelectUnits() {
+		bool isAnyUnitSelected = false;
 		// checking all units coordinates in order to select the right ones
 		allUnits.ForEach(unit => {
 			if (IsInSelectRectangle(unit)) {
 				unit.GetComponent<FighterController>().isSelected = true;
 				// temporary
 				unit.GetComponent<SpriteRenderer>().color = Color.green;
+
+				isAnyUnitSelected = true;
+				DeselectSpaceStation();
 			} else {
 				unit.GetComponent<FighterController>().isSelected = false;
 				// temporary
 				unit.GetComponent<SpriteRenderer>().color = Color.white;
 			}
 		});
+
+		// if there are no units selected
+		if (isAnyUnitSelected == false) {
+			if (IsInSelectRectangle(spaceStation)) {
+				spaceStation.GetComponent<StationController>().isSelected = true;
+				// temporary
+				spaceStation.GetComponent<SpriteRenderer>().color = Color.green;
+			} else {
+				DeselectSpaceStation();
+			}
+		}
+	}
+
+	void DeselectSpaceStation() {
+		spaceStation.GetComponent<StationController>().isSelected = false;
+		// temporary
+		spaceStation.GetComponent<SpriteRenderer>().color = Color.grey;
 	}
 
 	void CalculateSelectRectangle() {
@@ -95,7 +118,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	bool IsInSelectRectangle(GameObject unit) {
-		float unitSize = unit.GetComponent<FighterController>().Size;
+		float unitSize = unit.GetComponent<Attributes>().Size;
 		Vector3 leftBottom = new Vector3(unit.transform.position.x - unitSize, unit.transform.position.y - unitSize, 0.0f);
 		Vector3 leftTop = new Vector3(unit.transform.position.x - unitSize, unit.transform.position.y + unitSize, 0.0f);
 		Vector3 rightBottom = new Vector3(unit.transform.position.x + unitSize, unit.transform.position.y - unitSize, 0.0f);

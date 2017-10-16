@@ -7,11 +7,6 @@ public class FighterController : MonoBehaviour {
 	public float speed;
 	public bool isSelected;
 
-	public float Size
-	{
-		get { return 0.5f; }
-	}
-
 	private bool isMoving;
 	private Vector3 movePosition;
 	private GameController gameController;
