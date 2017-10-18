@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour {
 	void Update () {
 		// scrolling
 		cam.orthographicSize -= cam.orthographicSize * Input.GetAxis("Mouse ScrollWheel") * scrollingSpeed * Time.deltaTime;
-		cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, 5.0f, 20.0f);
+		cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, 3.0f, 10.0f);
 
 		// moving camera
 		float moveCameraHorizontal = GetKeyToFloat(KeyCode.D) - GetKeyToFloat(KeyCode.A);
