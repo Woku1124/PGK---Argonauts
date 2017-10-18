@@ -60,7 +60,7 @@ public class GameController : MonoBehaviour {
 
 			if (Input.GetMouseButtonUp(0)) {
 				// then select units
-				SelectUnits();
+				SelectObjects();
 
 				isSelecting = false;
 				GameObject.Destroy(selectRectangle);
@@ -69,7 +69,7 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	void SelectUnits() {
+	void SelectObjects() {
 		bool isAnyUnitSelected = false;
 		// checking all units coordinates in order to select the right ones
 		allUnits.ForEach(unit => {
@@ -79,6 +79,8 @@ public class GameController : MonoBehaviour {
 				unit.GetComponent<SpriteRenderer>().color = Color.green;
 
 				isAnyUnitSelected = true;
+
+				// we need to deselect space station in case if there is station selected
 				DeselectSpaceStation();
 			} else {
 				unit.GetComponent<FighterController>().isSelected = false;
@@ -89,6 +91,7 @@ public class GameController : MonoBehaviour {
 
 		// if there are no units selected
 		if (isAnyUnitSelected == false) {
+			// then check if there is space station in select rectangle
 			if (IsInSelectRectangle(spaceStation)) {
 				spaceStation.GetComponent<StationController>().isSelected = true;
 				// temporary
@@ -117,12 +120,12 @@ public class GameController : MonoBehaviour {
 		endSelectRectanglePosition.Set(greaterX, greaterY, 0.0f);
 	}
 
-	bool IsInSelectRectangle(GameObject unit) {
-		float unitSize = unit.GetComponent<Attributes>().Size;
-		Vector3 leftBottom = new Vector3(unit.transform.position.x - unitSize, unit.transform.position.y - unitSize, 0.0f);
-		Vector3 leftTop = new Vector3(unit.transform.position.x - unitSize, unit.transform.position.y + unitSize, 0.0f);
-		Vector3 rightBottom = new Vector3(unit.transform.position.x + unitSize, unit.transform.position.y - unitSize, 0.0f);
-		Vector3 rightTop = new Vector3(unit.transform.position.x + unitSize, unit.transform.position.y + unitSize, 0.0f);
+	bool IsInSelectRectangle(GameObject obj) {
+		float objSize = obj.GetComponent<Attributes>().Size;
+		Vector3 leftBottom = new Vector3(obj.transform.position.x - objSize, obj.transform.position.y - objSize, 0.0f);
+		Vector3 leftTop = new Vector3(obj.transform.position.x - objSize, obj.transform.position.y + objSize, 0.0f);
+		Vector3 rightBottom = new Vector3(obj.transform.position.x + objSize, obj.transform.position.y - objSize, 0.0f);
+		Vector3 rightTop = new Vector3(obj.transform.position.x + objSize, obj.transform.position.y + objSize, 0.0f);
 
 		// if place where we started select rectangle is on given unit
 		if (IsBetweenTwoVectors(startSelectionMousePosition, leftBottom, rightTop)) {
