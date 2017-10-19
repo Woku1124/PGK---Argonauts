@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour {
 
 	public GameObject selectRectanglePrefab;
 	public List<GameObject> allUnits;
-	public List<Vector3> movePositions;
+	public List<Vector3> lockedPositions;
 
 	private bool isSelecting;
 	private Vector3 startSelectionMousePosition;
@@ -21,10 +21,16 @@ public class GameController : MonoBehaviour {
 		isSelecting = false;
 
 		allUnits = new List<GameObject>();
-		movePositions = new List<Vector3>();
+		lockedPositions = new List<Vector3>();
 		// not sure if GameController Start method will always run AFTER creation of all GameObjects
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
 		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
+
+		for (int x = 0; x < spaceStation.GetComponent<Attributes>().SizeX; x++) {
+			for (int y = 0; y < spaceStation.GetComponent<Attributes>().SizeY; y++) {
+				lockedPositions.Add(new Vector3(x, y, 0.0f));
+			}
+		}
 	}
 	
 	// Update is called once per frame
@@ -121,11 +127,12 @@ public class GameController : MonoBehaviour {
 	}
 
 	bool IsInSelectRectangle(GameObject obj) {
-		float objSize = obj.GetComponent<Attributes>().Size;
-		Vector3 leftBottom = new Vector3(obj.transform.position.x - objSize, obj.transform.position.y - objSize, 0.0f);
-		Vector3 leftTop = new Vector3(obj.transform.position.x - objSize, obj.transform.position.y + objSize, 0.0f);
-		Vector3 rightBottom = new Vector3(obj.transform.position.x + objSize, obj.transform.position.y - objSize, 0.0f);
-		Vector3 rightTop = new Vector3(obj.transform.position.x + objSize, obj.transform.position.y + objSize, 0.0f);
+		float objSizeX = obj.GetComponent<Attributes>().SizeX;
+		float objSizeY = obj.GetComponent<Attributes>().SizeY;
+		Vector3 leftBottom = new Vector3(obj.transform.position.x, obj.transform.position.y, 0.0f);
+		Vector3 leftTop = new Vector3(obj.transform.position.x, obj.transform.position.y + objSizeY, 0.0f);
+		Vector3 rightBottom = new Vector3(obj.transform.position.x + objSizeX, obj.transform.position.y, 0.0f);
+		Vector3 rightTop = new Vector3(obj.transform.position.x + objSizeX, obj.transform.position.y + objSizeY, 0.0f);
 
 		// if place where we started select rectangle is on given unit
 		if (IsBetweenTwoVectors(startSelectionMousePosition, leftBottom, rightTop)) {

@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Attributes: MonoBehaviour {
 
-	public float Size;
+	public float SizeX;
+	public float SizeY;
 }

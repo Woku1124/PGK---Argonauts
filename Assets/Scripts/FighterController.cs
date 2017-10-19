@@ -31,7 +31,7 @@ public class FighterController : MonoBehaviour {
 		if (isMoving && movePosition.Equals(transform.position)) {
 			// that means we are not moving anymore
 			isMoving = false;
-			gameController.movePositions.Remove(movePosition);
+			gameController.lockedPositions.Remove(movePosition);
 		}
 	}
 
@@ -47,7 +47,7 @@ public class FighterController : MonoBehaviour {
 			// if we are already moving
 			if (isMoving) {
 				// then we need to remove current movePosition from collection in GameController
-				gameController.movePositions.Remove(movePosition);
+				gameController.lockedPositions.Remove(movePosition);
 			}
 
 			// we are moving
@@ -62,7 +62,7 @@ public class FighterController : MonoBehaviour {
 
 			// find spot as close to our click as possible but without any units there
 			movePosition = FindFreeSpot(movePosition);
-			gameController.movePositions.Add(movePosition);
+			gameController.lockedPositions.Add(movePosition);
 		}
 	}
 
@@ -76,7 +76,7 @@ public class FighterController : MonoBehaviour {
 				freeSpot = FindFreeSpot(freeSpot);
 			}
 		});
-		gameController.movePositions.ForEach(position => {
+		gameController.lockedPositions.ForEach(position => {
 			if (position.Equals(freeSpot)) {
 				// temporary solution
 				freeSpot.x++;
