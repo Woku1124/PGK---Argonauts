@@ -26,8 +26,8 @@ public class GameController : MonoBehaviour {
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
 		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
 
-		for (int x = 0; x < spaceStation.GetComponent<Attributes>().SizeX; x++) {
-			for (int y = 0; y < spaceStation.GetComponent<Attributes>().SizeY; y++) {
+		for (float x = spaceStation.transform.position.x; x < spaceStation.GetComponent<Attributes>().SizeX + spaceStation.transform.position.x; x++) {
+			for (float y = spaceStation.transform.position.y; y < spaceStation.GetComponent<Attributes>().SizeY + spaceStation.transform.position.y; y++) {
 				lockedPositions.Add(new Vector3(x, y, 0.0f));
 			}
 		}
