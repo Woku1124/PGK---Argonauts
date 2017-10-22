@@ -63,6 +63,9 @@ public class FighterController : MonoBehaviour {
 			// find spot as close to our click as possible but without any units there
 			movePosition = FindFreeSpot(movePosition);
 			gameController.lockedPositions.Add(movePosition);
+
+			// change direction based on movePosition
+			ChangeDirection();
 		}
 	}
 
@@ -84,5 +87,34 @@ public class FighterController : MonoBehaviour {
 			}
 		});
 		return freeSpot;
+	}
+
+	// this is garbage but don't have time to make it better atm
+	void ChangeDirection() {
+		if (movePosition.x >= transform.position.x && movePosition.y >= transform.position.y) {
+			if (movePosition.x - transform.position.x > movePosition.y - transform.position.y) {
+				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 270.0f)));
+			} else {
+				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)));
+			}
+		} else if (movePosition.x >= transform.position.x && movePosition.y <= transform.position.y) {
+			if (movePosition.x - transform.position.x > transform.position.y - movePosition.y) {
+				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 270.0f)));
+			} else {
+				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 180.0f)));
+			}
+		} else if (movePosition.x <= transform.position.x && movePosition.y >= transform.position.y) {
+			if (transform.position.x - movePosition.x > movePosition.y - transform.position.y) {
+				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 90.0f)));
+			} else {
+				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)));
+			}
+		} else if (movePosition.x <= transform.position.x && movePosition.y <= transform.position.y) {
+			if (transform.position.x - movePosition.x > transform.position.y - movePosition.y) {
+				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 90.0f)));
+			} else {
+				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 180.0f)));
+			}
+		}
 	}
 }

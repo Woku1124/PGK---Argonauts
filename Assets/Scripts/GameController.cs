@@ -26,9 +26,14 @@ public class GameController : MonoBehaviour {
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
 		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
 
-		for (float x = spaceStation.transform.position.x; x < spaceStation.GetComponent<Attributes>().SizeX + spaceStation.transform.position.x; x++) {
-			for (float y = spaceStation.transform.position.y; y < spaceStation.GetComponent<Attributes>().SizeY + spaceStation.transform.position.y; y++) {
-				lockedPositions.Add(new Vector3(x, y, 0.0f));
+		float x = spaceStation.transform.position.x - spaceStation.GetComponent<Attributes>().SizeX;
+		float y = spaceStation.transform.position.y - spaceStation.GetComponent<Attributes>().SizeY;
+		float finalX = spaceStation.transform.position.x + spaceStation.GetComponent<Attributes>().SizeX;
+		float finalY = spaceStation.transform.position.y + spaceStation.GetComponent<Attributes>().SizeY;
+
+		for (float xx = x; xx < finalX; xx++) {
+			for (float yy = y; yy < finalY; yy++) {
+				lockedPositions.Add(new Vector3(xx, yy, 0.0f));
 			}
 		}
 	}
@@ -129,9 +134,9 @@ public class GameController : MonoBehaviour {
 	bool IsInSelectRectangle(GameObject obj) {
 		float objSizeX = obj.GetComponent<Attributes>().SizeX;
 		float objSizeY = obj.GetComponent<Attributes>().SizeY;
-		Vector3 leftBottom = new Vector3(obj.transform.position.x, obj.transform.position.y, 0.0f);
-		Vector3 leftTop = new Vector3(obj.transform.position.x, obj.transform.position.y + objSizeY, 0.0f);
-		Vector3 rightBottom = new Vector3(obj.transform.position.x + objSizeX, obj.transform.position.y, 0.0f);
+		Vector3 leftBottom = new Vector3(obj.transform.position.x - objSizeX, obj.transform.position.y - objSizeY, 0.0f);
+		Vector3 leftTop = new Vector3(obj.transform.position.x - objSizeX, obj.transform.position.y + objSizeY, 0.0f);
+		Vector3 rightBottom = new Vector3(obj.transform.position.x + objSizeX, obj.transform.position.y - objSizeY, 0.0f);
 		Vector3 rightTop = new Vector3(obj.transform.position.x + objSizeX, obj.transform.position.y + objSizeY, 0.0f);
 
 		// if place where we started select rectangle is on given unit
