@@ -7,6 +7,9 @@ public class FighterController : MonoBehaviour {
 	public float speed;
 	public bool isSelected;
 
+	public List<Vector3> occupiedPositions;
+
+	private int direction = 0; // 0 - up, 1 - right, 2 - down, 3 - left
 	private bool isMoving;
 	private Vector3 movePosition;
 	private GameController gameController;
@@ -16,6 +19,8 @@ public class FighterController : MonoBehaviour {
 		isMoving = false;
 		isSelected = false;
 		movePosition = new Vector3();
+		occupiedPositions = new List<Vector3>();
+		CalculateOccupiedPositions(transform.position);
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
@@ -31,7 +36,6 @@ public class FighterController : MonoBehaviour {
 		if (isMoving && movePosition.Equals(transform.position)) {
 			// that means we are not moving anymore
 			isMoving = false;
-			gameController.lockedPositions.Remove(movePosition);
 		}
 	}
 
@@ -44,12 +48,6 @@ public class FighterController : MonoBehaviour {
 	void CalculateMovement() {
 		// if right mouse button down
 		if (Input.GetMouseButtonDown(1)) {
-			// if we are already moving
-			if (isMoving) {
-				// then we need to remove current movePosition from collection in GameController
-				gameController.lockedPositions.Remove(movePosition);
-			}
-
 			// we are moving
 			isMoving = true;
 
@@ -60,11 +58,22 @@ public class FighterController : MonoBehaviour {
 			movePosition.x = Mathf.Round(mousePosition3D.x);
 			movePosition.y = Mathf.Round(mousePosition3D.y);
 
+			// clear locked position in game controller
+			occupiedPositions.ForEach(position => gameController.lockedPositions.Remove(position));
+			// clear occupied positions
+			occupiedPositions.Clear();
+
 			// find spot as close to our click as possible but without any units there
 			movePosition = FindFreeSpot(movePosition);
-			gameController.lockedPositions.Add(movePosition);
+			// calculate direction based on movePosition
+			CalculateDirection();
 
-			// change direction based on movePosition
+			// calculate new occupied position based on movePosition
+			CalculateOccupiedPositions(movePosition);
+			// add new locked positions to game controller based on occupiedPositions
+			gameController.lockedPositions.AddRange(occupiedPositions);
+
+			// change direction
 			ChangeDirection();
 		}
 	}
@@ -72,48 +81,96 @@ public class FighterController : MonoBehaviour {
 	//TODO: It should be done better later.
 	Vector3 FindFreeSpot(Vector3 mousePos) {
 		Vector3 freeSpot = mousePos;
-		gameController.allUnits.ForEach(unit => {
-			if (unit.transform.position.Equals(freeSpot) && unit.Equals(gameObject) == false) {
-				// temporary solution
-				freeSpot.x++;
-				freeSpot = FindFreeSpot(freeSpot);
-			}
-		});
-		gameController.lockedPositions.ForEach(position => {
-			if (position.Equals(freeSpot)) {
-				// temporary solution
-				freeSpot.x++;
-				freeSpot = FindFreeSpot(freeSpot);
-			}
-		});
+
+		if (isEnoughRoom(freeSpot) == false && freeSpot.Equals(transform.position) == false) {
+			// temporary solution
+			freeSpot.x++;
+			freeSpot = FindFreeSpot(freeSpot);
+		}
 		return freeSpot;
 	}
 
-	// this is garbage but don't have time to make it better atm
-	void ChangeDirection() {
+
+	void CalculateDirection() {
 		if (movePosition.x >= transform.position.x && movePosition.y >= transform.position.y) {
 			if (movePosition.x - transform.position.x > movePosition.y - transform.position.y) {
-				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 270.0f)));
+				direction = 1;
 			} else {
-				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)));
+				direction = 0;
 			}
 		} else if (movePosition.x >= transform.position.x && movePosition.y <= transform.position.y) {
 			if (movePosition.x - transform.position.x > transform.position.y - movePosition.y) {
-				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 270.0f)));
+				direction = 1;
 			} else {
-				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 180.0f)));
+				direction = 2;
 			}
 		} else if (movePosition.x <= transform.position.x && movePosition.y >= transform.position.y) {
 			if (transform.position.x - movePosition.x > movePosition.y - transform.position.y) {
-				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 90.0f)));
+				direction = 3;
 			} else {
-				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)));
+				direction = 0;
 			}
 		} else if (movePosition.x <= transform.position.x && movePosition.y <= transform.position.y) {
 			if (transform.position.x - movePosition.x > transform.position.y - movePosition.y) {
-				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 90.0f)));
+				direction = 3;
 			} else {
-				transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 180.0f)));
+				direction = 2;
+			}
+		}
+	}
+	// this is garbage but don't have time to make it better atm
+	void ChangeDirection() {
+		if (direction == 0) {
+			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)));
+		} else if (direction == 1) {
+			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 270.0f)));
+		} else if (direction == 2) {
+			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 180.0f)));
+		} else if (direction == 3) {
+			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 90.0f)));
+		}
+	}
+
+	bool isEnoughRoom(Vector3 position) {
+		bool enough = true;
+
+		float horizontalSize;
+		float verticalSize;
+
+		if (direction == 0 || direction == 2) {
+			horizontalSize = GetComponent<Attributes>().SizeX;
+			verticalSize = GetComponent<Attributes>().SizeY;
+		} else {
+			horizontalSize = GetComponent<Attributes>().SizeY;
+			verticalSize = GetComponent<Attributes>().SizeX;
+		}
+
+		float x = position.x - horizontalSize;
+		float y = position.y - verticalSize;
+		float finalX = position.x + horizontalSize;
+		float finalY = position.y + verticalSize;
+
+		for (int xx = (int)x; xx < finalX; xx++) {
+			for (int yy = (int)y; yy < finalY; yy++) {
+				gameController.lockedPositions.ForEach(lockedPos => {
+					if (new Vector3(xx, yy, 0.0f).Equals(lockedPos)) {
+						enough = false;
+					}
+				});
+			}
+		}
+		return enough;
+	}
+
+	void CalculateOccupiedPositions(Vector3 position) {
+		float x = position.x - GetComponent<Attributes>().SizeX;
+		float y = position.y - GetComponent<Attributes>().SizeY;
+		float finalX = position.x + GetComponent<Attributes>().SizeX;
+		float finalY = position.y + GetComponent<Attributes>().SizeY;
+
+		for (int xx = (int)x; xx < finalX; xx++) {
+			for (int yy = (int)y; yy < finalY; yy++) {
+				occupiedPositions.Add(new Vector3(xx, yy, 0.0f));
 			}
 		}
 	}

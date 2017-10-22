@@ -26,13 +26,21 @@ public class GameController : MonoBehaviour {
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
 		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
 
+		// lock units positions
+		allUnits.ForEach(unit => { 
+			unit.GetComponent<FighterController>().occupiedPositions.ForEach(position => {
+				lockedPositions.Add(position);
+			});
+		});
+
+		// lock space station positions
 		float x = spaceStation.transform.position.x - spaceStation.GetComponent<Attributes>().SizeX;
 		float y = spaceStation.transform.position.y - spaceStation.GetComponent<Attributes>().SizeY;
 		float finalX = spaceStation.transform.position.x + spaceStation.GetComponent<Attributes>().SizeX;
 		float finalY = spaceStation.transform.position.y + spaceStation.GetComponent<Attributes>().SizeY;
 
-		for (float xx = x; xx < finalX; xx++) {
-			for (float yy = y; yy < finalY; yy++) {
+		for (int xx = (int)x; xx < finalX; xx++) {
+			for (int yy = (int)y; yy < finalY; yy++) {
 				lockedPositions.Add(new Vector3(xx, yy, 0.0f));
 			}
 		}
