@@ -436,6 +436,14 @@ Prefab:
       propertyPath: m_Name
       value: BiggerSpaceship (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
   m_IsPrefabParent: 0
@@ -1168,6 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6519270fdb84645b0affac227b925f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 300
 --- !u!114 &435437758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,6 +1311,14 @@ Prefab:
     - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
@@ -1521,6 +1538,14 @@ Prefab:
     - target: {fileID: 1354082281288604, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
       propertyPath: m_Name
       value: BiggerSpaceship (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
@@ -1889,6 +1914,59 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677230414}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &780173148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 780173150}
+  - component: {fileID: 780173149}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &780173149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780173148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e58f6e7e6b2be3c4cbc5112a47cbb649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clip: {fileID: 8300000, guid: 55ca2e38d0850f64baa39bb2286c3368, type: 3}
+    name: SpaceSound
+    volume: 0.465
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: be845c0a789f3344b91a65b54ae47d7e, type: 3}
+    name: Space Loop
+    volume: 0.099
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+--- !u!4 &780173150
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780173148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &801580085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,7 +2370,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 831542086}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f8a179a0b7cfa944be1758dfc964005, type: 3}
   m_Name: 
@@ -2304,11 +2382,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 831542086}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c6519270fdb84645b0affac227b925f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 100
 --- !u!23 &831542090
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2418,6 +2497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6519270fdb84645b0affac227b925f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 300
 --- !u!23 &833759514
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2987,6 +3067,14 @@ Prefab:
     - target: {fileID: 1354082281288604, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
       propertyPath: m_Name
       value: BiggerSpaceship (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
@@ -3835,6 +3923,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4715420897850632, guid: 3c0a2d311f250a64c931d0df373699f0, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4715420897850632, guid: 3c0a2d311f250a64c931d0df373699f0, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c0a2d311f250a64c931d0df373699f0, type: 2}
   m_IsPrefabParent: 0
@@ -3969,6 +4065,14 @@ Prefab:
     - target: {fileID: 1354082281288604, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
       propertyPath: m_Name
       value: BiggerSpaceship (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
@@ -6308,3 +6412,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6519270fdb84645b0affac227b925f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 300

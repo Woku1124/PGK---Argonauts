@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrollUV : MonoBehaviour {
+public class ScrollUV : MonoBehaviour
+{
+
+    public float speed = 300f;
 
 	void Update ()
 	{
@@ -12,7 +15,7 @@ public class ScrollUV : MonoBehaviour {
 
 	    Vector2 offset = mat.mainTextureOffset;
 
-	    offset.x += Time.deltaTime / 300f;
+	    offset.x += Time.deltaTime / speed;
 	    mat.mainTextureOffset = offset;
 	}
 }
