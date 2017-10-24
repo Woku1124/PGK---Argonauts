@@ -10,6 +10,7 @@ TagManager:
   - Unit2
   - Enemy
   - EnemyStation
+  - Asteroid
   layers:
   - Default
   - TransparentFX

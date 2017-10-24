@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StationController : MonoBehaviour {
-
-	public bool isSelected;
-    public float Ore;
-
+public class AsteroidController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +11,6 @@ public class StationController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(Vector3.forward * 1f * Time.deltaTime, Space.Self);
-
-
+        transform.Rotate(Vector3.forward * 5f * Time.deltaTime, Space.Self);
     }
 }
