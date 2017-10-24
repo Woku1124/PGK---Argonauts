@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FighterController : MonoBehaviour {
+public class ShipController : MonoBehaviour {
 
 	public float speed;
 	public bool isSelected;

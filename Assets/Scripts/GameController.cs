@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour {
 
 		// lock units positions
 		allUnits.ForEach(unit => { 
-			unit.GetComponent<FighterController>().occupiedPositions.ForEach(position => {
+			unit.GetComponent<ShipController>().occupiedPositions.ForEach(position => {
 				lockedPositions.Add(position);
 			});
 		});
@@ -102,7 +102,7 @@ public class GameController : MonoBehaviour {
 		// checking all units coordinates in order to select the right ones
 		allUnits.ForEach(unit => {
 			if (IsInSelectRectangle(unit)) {
-				unit.GetComponent<FighterController>().isSelected = true;
+				unit.GetComponent<ShipController>().isSelected = true;
 				// temporary
 				unit.GetComponent<SpriteRenderer>().color = Color.green;
 
@@ -111,7 +111,7 @@ public class GameController : MonoBehaviour {
 				// we need to deselect space station in case if there is station selected
 				DeselectSpaceStation();
 			} else {
-				unit.GetComponent<FighterController>().isSelected = false;
+				unit.GetComponent<ShipController>().isSelected = false;
 				// temporary
 				unit.GetComponent<SpriteRenderer>().color = Color.white;
 			}
