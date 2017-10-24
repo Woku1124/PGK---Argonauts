@@ -68,7 +68,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SizeX: 3
-  SizeY: 8
+  SizeY: 6
+  direction: 0
 --- !u!212 &212009820011597958
 SpriteRenderer:
   m_ObjectHideFlags: 1

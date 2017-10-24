@@ -79,14 +79,36 @@ public class ShipController : MonoBehaviour {
 		}
 	}
 
-	//TODO: It should be done better later.
+	// TODO: Optymalizacja (teraz to bardzo wolno dziala)
 	Vector3 FindFreeSpot(Vector3 mousePos) {
 		Vector3 freeSpot = mousePos;
 
-		if (isEnoughRoom(freeSpot) == false && freeSpot.Equals(transform.position) == false) {
-			// temporary solution
-			freeSpot.x++;
-			freeSpot = FindFreeSpot(freeSpot);
+		int iteration = 0;
+		int translation = 0;
+		int sign = 0;
+		while (isEnoughRoom(freeSpot) == false && freeSpot.Equals(transform.position) == false) {
+			int finalTranslation;
+
+			if (iteration % 2 == 0) {
+				translation++;
+			}
+			finalTranslation = (translation % 2 != 0) ? translation : -translation;
+			sign = (translation % 2 != 0) ? 1 : -1;
+
+			if (iteration % 2 == 0) {
+				for (int i = 0; i != finalTranslation; i += sign) {
+					freeSpot.y += i;
+					if (isEnoughRoom(freeSpot) || freeSpot.Equals(transform.position))
+						return freeSpot;
+				}
+			} else {
+				for (int i = 0; i != finalTranslation; i += sign) {
+					freeSpot.x += i;
+					if (isEnoughRoom(freeSpot) || freeSpot.Equals(transform.position))
+						return freeSpot;
+				}
+			}
+			iteration++;
 		}
 		return freeSpot;
 	}
