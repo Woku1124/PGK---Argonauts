@@ -17,6 +17,10 @@ public class GameController : MonoBehaviour {
 	private GameObject spaceStation;
     private GameObject unit;
 
+
+	public List<GameObject> enemyUnits;
+	private GameObject piratesStation;
+
     private float InterfaceX;
     private float InterfaceY;
     private float InterfaceWidth;
@@ -25,19 +29,35 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
 		isSelecting = false;
 
 		allUnits = new List<GameObject>();
+		enemyUnits = new List<GameObject>();
+
 		lockedPositions = new List<Vector3>();
 		// not sure if GameController Start method will always run AFTER creation of all GameObjects
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
         allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit1"));
         allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit2"));
+
+		enemyUnits.AddRange (GameObject.FindGameObjectsWithTag ("Enemy"));
+		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
+		piratesStation = GameObject.FindGameObjectWithTag("EnemyStation");
+
+
+
         spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
+
 
 		// lock units positions
 		allUnits.ForEach(unit => { 
 			unit.GetComponent<ShipController>().occupiedPositions.ForEach(position => {
+				lockedPositions.Add(position);
+			});
+		});
+		enemyUnits.ForEach(unit => { 
+			unit.GetComponent<PiratesFighterController>().occupiedPositions.ForEach(position => {
 				lockedPositions.Add(position);
 			});
 		});
@@ -50,6 +70,16 @@ public class GameController : MonoBehaviour {
 
 		for (int xx = (int)x; xx < finalX; xx++) {
 			for (int yy = (int)y; yy < finalY; yy++) {
+				lockedPositions.Add(new Vector3(xx, yy, 0.0f));
+			}
+		}
+		float a = piratesStation.transform.position.x - piratesStation.GetComponent<Attributes>().SizeX;
+		float b = piratesStation.transform.position.y - piratesStation.GetComponent<Attributes>().SizeY;
+		float finalA = piratesStation.transform.position.x + piratesStation.GetComponent<Attributes>().SizeX;
+		float finalB = piratesStation.transform.position.y + piratesStation.GetComponent<Attributes>().SizeY;
+
+		for (int xx = (int)a; xx < finalA; xx++) {
+			for (int yy = (int)b; yy < finalB; yy++) {
 				lockedPositions.Add(new Vector3(xx, yy, 0.0f));
 			}
 		}
