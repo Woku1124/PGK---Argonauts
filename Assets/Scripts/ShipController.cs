@@ -9,10 +9,10 @@ public class ShipController : MonoBehaviour {
 
 	public List<Vector3> occupiedPositions;
 
-	private int direction = 0; // 0 - up, 1 - right, 2 - down, 3 - left
 	private bool isMoving;
 	private Vector3 movePosition;
 	private GameController gameController;
+	private Attributes myAttributes;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +21,7 @@ public class ShipController : MonoBehaviour {
 		movePosition = new Vector3();
 		occupiedPositions = new List<Vector3>();
 		CalculateOccupiedPositions(transform.position);
+		myAttributes = GetComponent<Attributes>();
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
@@ -94,39 +95,39 @@ public class ShipController : MonoBehaviour {
 	void CalculateDirection() {
 		if (movePosition.x >= transform.position.x && movePosition.y >= transform.position.y) {
 			if (movePosition.x - transform.position.x > movePosition.y - transform.position.y) {
-				direction = 1;
+				myAttributes.direction = 1;
 			} else {
-				direction = 0;
+				myAttributes.direction = 0;
 			}
 		} else if (movePosition.x >= transform.position.x && movePosition.y <= transform.position.y) {
 			if (movePosition.x - transform.position.x > transform.position.y - movePosition.y) {
-				direction = 1;
+				myAttributes.direction = 1;
 			} else {
-				direction = 2;
+				myAttributes.direction = 2;
 			}
 		} else if (movePosition.x <= transform.position.x && movePosition.y >= transform.position.y) {
 			if (transform.position.x - movePosition.x > movePosition.y - transform.position.y) {
-				direction = 3;
+				myAttributes.direction = 3;
 			} else {
-				direction = 0;
+				myAttributes.direction = 0;
 			}
 		} else if (movePosition.x <= transform.position.x && movePosition.y <= transform.position.y) {
 			if (transform.position.x - movePosition.x > transform.position.y - movePosition.y) {
-				direction = 3;
+				myAttributes.direction = 3;
 			} else {
-				direction = 2;
+				myAttributes.direction = 2;
 			}
 		}
 	}
 	// this is garbage but don't have time to make it better atm
 	void ChangeDirection() {
-		if (direction == 0) {
+		if (myAttributes.direction == 0) {
 			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)));
-		} else if (direction == 1) {
+		} else if (myAttributes.direction == 1) {
 			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 270.0f)));
-		} else if (direction == 2) {
+		} else if (myAttributes.direction == 2) {
 			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 180.0f)));
-		} else if (direction == 3) {
+		} else if (myAttributes.direction == 3) {
 			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 90.0f)));
 		}
 	}
@@ -137,12 +138,12 @@ public class ShipController : MonoBehaviour {
 		float horizontalSize;
 		float verticalSize;
 
-		if (direction == 0 || direction == 2) {
-			horizontalSize = GetComponent<Attributes>().SizeX;
-			verticalSize = GetComponent<Attributes>().SizeY;
+		if (myAttributes.direction == 0 || myAttributes.direction == 2) {
+			horizontalSize = myAttributes.SizeX;
+			verticalSize = myAttributes.SizeY;
 		} else {
-			horizontalSize = GetComponent<Attributes>().SizeY;
-			verticalSize = GetComponent<Attributes>().SizeX;
+			horizontalSize = myAttributes.SizeY;
+			verticalSize = myAttributes.SizeX;
 		}
 
 		float x = position.x - horizontalSize;

@@ -149,8 +149,17 @@ public class GameController : MonoBehaviour {
 	}
 
 	bool IsInSelectRectangle(GameObject obj) {
-		float objSizeX = obj.GetComponent<Attributes>().SizeX;
-		float objSizeY = obj.GetComponent<Attributes>().SizeY;
+		int objDirection = obj.GetComponent<Attributes>().direction;
+		float objSizeX;
+		float objSizeY;
+		if (objDirection == 0 || objDirection == 2) {
+			objSizeX = obj.GetComponent<Attributes>().SizeX;
+			objSizeY = obj.GetComponent<Attributes>().SizeY;
+		} else {
+			objSizeX = obj.GetComponent<Attributes>().SizeY;
+			objSizeY = obj.GetComponent<Attributes>().SizeX;
+		}
+
 		Vector3 leftBottom = new Vector3(obj.transform.position.x - objSizeX, obj.transform.position.y - objSizeY, 0.0f);
 		Vector3 leftTop = new Vector3(obj.transform.position.x - objSizeX, obj.transform.position.y + objSizeY, 0.0f);
 		Vector3 rightBottom = new Vector3(obj.transform.position.x + objSizeX, obj.transform.position.y - objSizeY, 0.0f);

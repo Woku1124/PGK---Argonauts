@@ -9,45 +9,59 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1354082281288604}
+  m_RootGameObject: {fileID: 1883724120664286}
   m_IsPrefabParent: 1
---- !u!1 &1354082281288604
+--- !u!1 &1883724120664286
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4892610358176714}
-  - component: {fileID: 212241088920644962}
-  - component: {fileID: 114823431684434364}
-  - component: {fileID: 114501566216379112}
+  - component: {fileID: 4474458532571372}
+  - component: {fileID: 212524404588399052}
+  - component: {fileID: 114393270562388830}
+  - component: {fileID: 114563312728070382}
   m_Layer: 0
-  m_Name: BiggerSpaceship
+  m_Name: Frigates
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4892610358176714
+--- !u!4 &4474458532571372
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1354082281288604}
+  m_GameObject: {fileID: 1883724120664286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114501566216379112
+--- !u!114 &114393270562388830
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1354082281288604}
+  m_GameObject: {fileID: 1883724120664286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cea602e35802ed4dbda7d8eb1fe1356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  isSelected: 0
+  occupiedPositions: []
+--- !u!114 &114563312728070382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1883724120664286}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9a2d434b7dddee44a8c35b5a771a95e, type: 3}
@@ -55,26 +69,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SizeX: 1
   SizeY: 2
---- !u!114 &114823431684434364
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1354082281288604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfd7b93060ff2be4fade64324f75d023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  isSelected: 0
-  occupiedPositions: []
---- !u!212 &212241088920644962
+--- !u!212 &212524404588399052
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1354082281288604}
+  m_GameObject: {fileID: 1883724120664286}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

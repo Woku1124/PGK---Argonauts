@@ -6,4 +6,6 @@ public class Attributes: MonoBehaviour {
 
 	public float SizeX;
 	public float SizeY;
+
+	public int direction; // 0 - up, 1 - right, 2 - down, 3 - left
 }
