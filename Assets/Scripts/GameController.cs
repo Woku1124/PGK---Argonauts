@@ -16,19 +16,35 @@ public class GameController : MonoBehaviour {
 	private GameObject selectRectangle;
 	private GameObject spaceStation;
 
+	public List<GameObject> enemyUnits;
+	private GameObject piratesStation;
+
+
+
 	// Use this for initialization
 	void Start () {
 		isSelecting = false;
 
 		allUnits = new List<GameObject>();
+		enemyUnits = new List<GameObject>();
+
 		lockedPositions = new List<Vector3>();
 		// not sure if GameController Start method will always run AFTER creation of all GameObjects
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
+		enemyUnits.AddRange (GameObject.FindGameObjectsWithTag ("Enemy"));
 		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
+		piratesStation = GameObject.FindGameObjectWithTag("EnemyStation");
+
+
 
 		// lock units positions
 		allUnits.ForEach(unit => { 
 			unit.GetComponent<FighterController>().occupiedPositions.ForEach(position => {
+				lockedPositions.Add(position);
+			});
+		});
+		enemyUnits.ForEach(unit => { 
+			unit.GetComponent<PiratesFighterController>().occupiedPositions.ForEach(position => {
 				lockedPositions.Add(position);
 			});
 		});
@@ -41,6 +57,16 @@ public class GameController : MonoBehaviour {
 
 		for (int xx = (int)x; xx < finalX; xx++) {
 			for (int yy = (int)y; yy < finalY; yy++) {
+				lockedPositions.Add(new Vector3(xx, yy, 0.0f));
+			}
+		}
+		float a = piratesStation.transform.position.x - piratesStation.GetComponent<Attributes>().SizeX;
+		float b = piratesStation.transform.position.y - piratesStation.GetComponent<Attributes>().SizeY;
+		float finalA = piratesStation.transform.position.x + piratesStation.GetComponent<Attributes>().SizeX;
+		float finalB = piratesStation.transform.position.y + piratesStation.GetComponent<Attributes>().SizeY;
+
+		for (int xx = (int)a; xx < finalA; xx++) {
+			for (int yy = (int)b; yy < finalB; yy++) {
 				lockedPositions.Add(new Vector3(xx, yy, 0.0f));
 			}
 		}
