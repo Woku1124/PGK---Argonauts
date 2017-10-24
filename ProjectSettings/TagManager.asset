@@ -8,6 +8,8 @@ TagManager:
   - SpaceStation
   - Unit1
   - Unit2
+  - Enemy
+  - EnemyStation
   layers:
   - Default
   - TransparentFX

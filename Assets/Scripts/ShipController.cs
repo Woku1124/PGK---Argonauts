@@ -155,8 +155,6 @@ public class ShipController : MonoBehaviour {
 	}
 
 	bool isEnoughRoom(Vector3 position) {
-		bool enough = true;
-
 		float horizontalSize;
 		float verticalSize;
 
@@ -175,14 +173,12 @@ public class ShipController : MonoBehaviour {
 
 		for (int xx = (int)x; xx < finalX; xx++) {
 			for (int yy = (int)y; yy < finalY; yy++) {
-				gameController.lockedPositions.ForEach(lockedPos => {
-					if (new Vector3(xx, yy, 0.0f).Equals(lockedPos)) {
-						enough = false;
-					}
-				});
+				if (gameController.lockedPositions.Contains(new Vector3(xx, yy, 0.0f))) {
+					return false;
+				}
 			}
 		}
-		return enough;
+		return true;
 	}
 
 	void CalculateOccupiedPositions(Vector3 position) {

@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour {
 	void Update () {
 		// scrolling
 		cam.orthographicSize -= cam.orthographicSize * Input.GetAxis("Mouse ScrollWheel") * scrollingSpeed * Time.deltaTime;
-		cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, 5.0f, 20.0f);
+		cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, 10.0f, 25.0f);
 
 		//follow camera bound
 
