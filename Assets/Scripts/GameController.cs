@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour {
 	private GameObject spaceStation;
     private GameObject unit;
 
+    public StationController SS;
+
 	public List<GameObject> enemyUnits;
 	private GameObject piratesStation;
 
@@ -39,6 +41,7 @@ public class GameController : MonoBehaviour {
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
         allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit1"));
         allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit2"));
+        allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit3"));
 
 		enemyUnits.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
 		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
@@ -239,21 +242,48 @@ public class GameController : MonoBehaviour {
             GUI.BeginGroup(new Rect(300, 300, 400, 100));
 
             GUI.Box(new Rect(0, 0, 400, 100), "Space Station");
-            if (GUI.Button(new Rect(10, 40, 40, 40), "Fr"))
+            if (GUI.Button(new Rect(10, 40, 70, 40), "Fr-5 Ore"))
             {
-                unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit"), new Vector3(1, 0, 0), Quaternion.identity);
-                allUnits.Add(unit);
+                if (SS.Ore >= 5.0f)
+                {
+                    unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit"), new Vector3(1, 0, 0),
+                        Quaternion.identity);
+                    allUnits.Add(unit);
+                    SS.Ore -= 5.0f;
+                }
             }
-            if (GUI.Button(new Rect(50, 40, 40, 40), "Ft"))
+            if (GUI.Button(new Rect(80, 40, 70, 40), "Ft-10 Ore"))
             {
-                unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit1"), new Vector3(1, 0, 0), Quaternion.identity);
-                allUnits.Add(unit);
+                if (SS.Ore >= 10.0f)
+                {
+                    unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit1"), new Vector3(1, 0, 0),
+                        Quaternion.identity);
+                    allUnits.Add(unit);
+                    SS.Ore -= 10.0f;
+                }
             }
-            if (GUI.Button(new Rect(90, 40, 40, 40), "Dt"))
+            if (GUI.Button(new Rect(150, 40, 70, 40), "Dt-30 Ore"))
+            {               
+                if (SS.Ore >= 30.0f)
+                {
+                    unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit2"), new Vector3(1, 0, 0),
+                        Quaternion.identity);
+                    allUnits.Add(unit);
+                    SS.Ore -= 30.0f;
+                }
+            }
+            if (GUI.Button(new Rect(220, 40, 70, 40), "Hv-1 Ore"))
             {
-                unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit2"), new Vector3(1, 0, 0), Quaternion.identity);
-                allUnits.Add(unit);
+                if (SS.Ore >= 1.0f)
+                {
+                    unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit3"), new Vector3(1, 0, 0),
+                        Quaternion.identity);
+                    allUnits.Add(unit);
+                    SS.Ore -= 1.0f;
+                }
             }
+
+            GUI.Label(new Rect(300, 40, 50, 40), SS.Ore.ToString("0.##") + " Ore");
 
             GUI.EndGroup();
         }

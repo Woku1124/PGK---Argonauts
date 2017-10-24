@@ -730,6 +730,7 @@ MonoBehaviour:
     type: 2}
   allUnits: []
   lockedPositions: []
+  SS: {fileID: 2004651378}
   enemyUnits: []
 --- !u!4 &322064150
 Transform:
@@ -3990,6 +3991,10 @@ Prefab:
     - target: {fileID: 4210911880685378, guid: e4b413cbcbdbf2b4fb82f43a65220b6e, type: 2}
       propertyPath: m_LocalScale.z
       value: 3.471248
+      objectReference: {fileID: 0}
+    - target: {fileID: 1993865958109142, guid: e4b413cbcbdbf2b4fb82f43a65220b6e, type: 2}
+      propertyPath: m_TagString
+      value: Unit3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4b413cbcbdbf2b4fb82f43a65220b6e, type: 2}
