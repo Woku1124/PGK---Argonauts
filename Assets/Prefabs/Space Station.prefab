@@ -56,6 +56,10 @@ MonoBehaviour:
   SizeX: 4
   SizeY: 4
   direction: 0
+  hp: 1000
+  damage: 0
+  reloadTime: 0
+  range: 0
 --- !u!114 &114938725887962168
 MonoBehaviour:
   m_ObjectHideFlags: 1

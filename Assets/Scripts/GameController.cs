@@ -17,7 +17,6 @@ public class GameController : MonoBehaviour {
 	private GameObject spaceStation;
     private GameObject unit;
 
-
 	public List<GameObject> enemyUnits;
 	private GameObject piratesStation;
 
@@ -41,14 +40,9 @@ public class GameController : MonoBehaviour {
         allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit1"));
         allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit2"));
 
-		enemyUnits.AddRange (GameObject.FindGameObjectsWithTag ("Enemy"));
+		enemyUnits.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
 		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
 		piratesStation = GameObject.FindGameObjectWithTag("EnemyStation");
-
-
-
-        spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
-
 
 		// lock units positions
 		allUnits.ForEach(unit => { 
@@ -73,13 +67,15 @@ public class GameController : MonoBehaviour {
 				lockedPositions.Add(new Vector3(xx, yy, 0.0f));
 			}
 		}
-		float a = piratesStation.transform.position.x - piratesStation.GetComponent<Attributes>().SizeX;
-		float b = piratesStation.transform.position.y - piratesStation.GetComponent<Attributes>().SizeY;
-		float finalA = piratesStation.transform.position.x + piratesStation.GetComponent<Attributes>().SizeX;
-		float finalB = piratesStation.transform.position.y + piratesStation.GetComponent<Attributes>().SizeY;
 
-		for (int xx = (int)a; xx < finalA; xx++) {
-			for (int yy = (int)b; yy < finalB; yy++) {
+		// lock pirate space station positions
+		x = piratesStation.transform.position.x - piratesStation.GetComponent<Attributes>().SizeX;
+		y = piratesStation.transform.position.y - piratesStation.GetComponent<Attributes>().SizeY;
+		finalX = piratesStation.transform.position.x + piratesStation.GetComponent<Attributes>().SizeX;
+		finalY = piratesStation.transform.position.y + piratesStation.GetComponent<Attributes>().SizeY;
+
+		for (int xx = (int)x; xx < finalX; xx++) {
+			for (int yy = (int)y; yy < finalY; yy++) {
 				lockedPositions.Add(new Vector3(xx, yy, 0.0f));
 			}
 		}
@@ -236,9 +232,10 @@ public class GameController : MonoBehaviour {
 		}
 		return false;
 	}
+
     void OnGUI()
     {
-    if (spaceStation.GetComponent<StationController>().isSelected) {
+    	if (spaceStation.GetComponent<StationController>().isSelected) {
             GUI.BeginGroup(new Rect(300, 300, 400, 100));
 
             GUI.Box(new Rect(0, 0, 400, 100), "Space Station");
@@ -267,11 +264,3 @@ public class GameController : MonoBehaviour {
         return true;
     }
 }
-
-
-
-
-
-
-
-

@@ -70,6 +70,10 @@ MonoBehaviour:
   SizeX: 1
   SizeY: 2
   direction: 0
+  hp: 100
+  damage: 20
+  reloadTime: 1
+  range: 8
 --- !u!212 &212057338661394294
 SpriteRenderer:
   m_ObjectHideFlags: 1

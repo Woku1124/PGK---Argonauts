@@ -70,6 +70,10 @@ MonoBehaviour:
   SizeX: 3
   SizeY: 6
   direction: 0
+  hp: 400
+  damage: 100
+  reloadTime: 3
+  range: 12
 --- !u!212 &212009820011597958
 SpriteRenderer:
   m_ObjectHideFlags: 1
