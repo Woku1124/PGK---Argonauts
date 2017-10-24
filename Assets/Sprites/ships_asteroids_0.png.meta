@@ -1,9 +1,141 @@
 fileFormatVersion: 2
 guid: ce9e6732096059344b0e3d645c666180
-timeCreated: 1508282410
+timeCreated: 1508864344
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: ships_asteroids_0_0
+    21300002: ships_asteroids_0_1
+    21300004: ships_asteroids_0_2
+    21300006: ships_asteroids_0_3
+    21300008: ships_asteroids_0_4
+    21300010: ships_asteroids_0_5
+    21300012: ships_asteroids_0_6
+    21300014: ships_asteroids_0_7
+    21300016: ships_asteroids_0_8
+    21300018: ships_asteroids_0_9
+    21300020: ships_asteroids_0_10
+    21300022: ships_asteroids_0_11
+    21300024: ships_asteroids_0_12
+    21300026: ships_asteroids_0_13
+    21300028: ships_asteroids_0_14
+    21300030: ships_asteroids_0_15
+    21300032: ships_asteroids_0_16
+    21300034: ships_asteroids_0_17
+    21300036: ships_asteroids_0_18
+    21300038: ships_asteroids_0_19
+    21300040: ships_asteroids_0_20
+    21300042: ships_asteroids_0_21
+    21300044: ships_asteroids_0_22
+    21300046: ships_asteroids_0_23
+    21300048: ships_asteroids_0_24
+    21300050: ships_asteroids_0_25
+    21300052: ships_asteroids_0_26
+    21300054: ships_asteroids_0_27
+    21300056: ships_asteroids_0_28
+    21300058: ships_asteroids_0_29
+    21300060: ships_asteroids_0_30
+    21300062: ships_asteroids_0_31
+    21300064: ships_asteroids_0_32
+    21300066: ships_asteroids_0_33
+    21300068: ships_asteroids_0_34
+    21300070: ships_asteroids_0_35
+    21300072: ships_asteroids_0_36
+    21300074: ships_asteroids_0_37
+    21300076: ships_asteroids_0_38
+    21300078: ships_asteroids_0_39
+    21300080: ships_asteroids_0_40
+    21300082: ships_asteroids_0_41
+    21300084: ships_asteroids_0_42
+    21300086: ships_asteroids_0_43
+    21300088: ships_asteroids_0_44
+    21300090: ships_asteroids_0_45
+    21300092: ships_asteroids_0_46
+    21300094: ships_asteroids_0_47
+    21300096: ships_asteroids_0_48
+    21300098: ships_asteroids_0_49
+    21300100: ships_asteroids_0_50
+    21300102: ships_asteroids_0_51
+    21300104: ships_asteroids_0_52
+    21300106: ships_asteroids_0_53
+    21300108: ships_asteroids_0_54
+    21300110: ships_asteroids_0_55
+    21300112: ships_asteroids_0_56
+    21300114: ships_asteroids_0_57
+    21300116: ships_asteroids_0_58
+    21300118: ships_asteroids_0_59
+    21300120: ships_asteroids_0_60
+    21300122: ships_asteroids_0_61
+    21300124: ships_asteroids_0_62
+    21300126: ships_asteroids_0_63
+    21300128: ships_asteroids_0_64
+    21300130: ships_asteroids_0_65
+    21300132: ships_asteroids_0_66
+    21300134: ships_asteroids_0_67
+    21300136: ships_asteroids_0_68
+    21300138: ships_asteroids_0_69
+    21300140: ships_asteroids_0_70
+    21300142: ships_asteroids_0_71
+    21300144: ships_asteroids_0_72
+    21300146: ships_asteroids_0_73
+    21300148: ships_asteroids_0_74
+    21300150: ships_asteroids_0_75
+    21300152: ships_asteroids_0_76
+    21300154: ships_asteroids_0_77
+    21300156: ships_asteroids_0_78
+    21300158: ships_asteroids_0_79
+    21300160: ships_asteroids_0_80
+    21300162: ships_asteroids_0_81
+    21300164: ships_asteroids_0_82
+    21300166: ships_asteroids_0_83
+    21300168: ships_asteroids_0_84
+    21300170: ships_asteroids_0_85
+    21300172: ships_asteroids_0_86
+    21300174: ships_asteroids_0_87
+    21300176: ships_asteroids_0_88
+    21300178: ships_asteroids_0_89
+    21300180: ships_asteroids_0_90
+    21300182: ships_asteroids_0_91
+    21300184: ships_asteroids_0_92
+    21300186: ships_asteroids_0_93
+    21300188: ships_asteroids_0_94
+    21300190: ships_asteroids_0_95
+    21300192: ships_asteroids_0_96
+    21300194: ships_asteroids_0_97
+    21300196: ships_asteroids_0_98
+    21300198: ships_asteroids_0_99
+    21300200: ships_asteroids_0_100
+    21300202: ships_asteroids_0_101
+    21300204: ships_asteroids_0_102
+    21300206: ships_asteroids_0_103
+    21300208: ships_asteroids_0_104
+    21300210: ships_asteroids_0_105
+    21300212: ships_asteroids_0_106
+    21300214: ships_asteroids_0_107
+    21300216: ships_asteroids_0_108
+    21300218: ships_asteroids_0_109
+    21300220: ships_asteroids_0_110
+    21300222: ships_asteroids_0_111
+    21300224: ships_asteroids_0_112
+    21300226: ships_asteroids_0_113
+    21300228: ships_asteroids_0_114
+    21300230: ships_asteroids_0_115
+    21300232: ships_asteroids_0_116
+    21300234: ships_asteroids_0_117
+    21300236: ships_asteroids_0_118
+    21300238: ships_asteroids_0_119
+    21300240: ships_asteroids_0_120
+    21300242: ships_asteroids_0_121
+    21300244: ships_asteroids_0_122
+    21300246: ships_asteroids_0_123
+    21300248: ships_asteroids_0_124
+    21300250: ships_asteroids_0_125
+    21300252: ships_asteroids_0_126
+    21300254: ships_asteroids_0_127
+    21300256: ships_asteroids_0_128
+    21300258: ships_asteroids_0_129
+    21300260: ships_asteroids_0_130
+    21300262: ships_asteroids_0_131
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -39,7 +171,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -63,11 +195,3085 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ships_asteroids_0_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 564
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 560
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 528
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_3
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 560
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 548
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_5
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 544
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_6
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 528
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_7
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 563
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 560
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 544
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_10
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 532
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_11
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 516
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 512
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 480
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_14
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 512
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 500
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_16
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 496
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_17
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 480
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_18
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 515
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 512
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_20
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 496
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_21
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 484
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_22
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 468
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_23
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_24
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 432
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_25
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 464
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 452
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_27
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 448
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_28
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 432
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_29
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 467
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_30
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_31
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 448
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_32
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 436
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_33
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 420
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_34
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 385
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_36
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 416
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 404
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_38
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 400
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_39
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 384
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_40
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 419
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_41
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_42
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 400
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_43
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 388
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_44
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 372
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_46
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 335
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_47
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 368
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 356
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_49
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 352
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_50
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 336
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_51
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 371
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_52
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_53
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 352
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_54
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 340
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_55
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 324
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_56
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_57
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_58
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 320
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_59
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 308
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_60
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 304
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_61
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 288
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_62
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 323
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_63
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_64
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 304
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_65
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 292
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_66
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 276
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_67
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_68
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 240
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_69
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 272
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_70
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 260
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_71
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 256
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_72
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 240
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_73
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 275
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_74
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 272
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_75
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 256
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_76
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 244
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_77
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 228
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_78
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_79
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_80
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 224
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_81
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 212
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_82
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 208
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_83
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 192
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_84
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 227
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_85
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_86
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 208
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_87
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 196
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_88
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 180
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_89
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_90
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_91
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 176
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_92
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 164
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_93
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 160
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_94
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_95
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 179
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_96
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_97
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 160
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_98
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 148
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_99
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 132
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_100
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_101
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_102
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 128
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_103
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 116
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_104
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 112
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_105
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_106
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 131
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_107
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_108
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 112
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_109
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 100
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_110
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 84
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_111
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_112
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_113
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 80
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_114
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 68
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_115
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 64
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_116
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_117
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 83
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_118
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_119
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 64
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_120
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 52
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_121
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 36
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_122
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_123
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 80
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_124
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 32
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_125
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 20
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_126
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 16
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_127
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_128
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 35
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_129
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_130
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 16
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ships_asteroids_0_131
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 4
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
-    physicsShape: []
+    physicsShape:
+    - - {x: -50, y: -242}
+      - {x: -38, y: -232}
+      - {x: -38, y: -212}
+      - {x: -44, y: -202}
+      - {x: -50, y: -194}
+      - {x: -38, y: -184}
+      - {x: -38, y: -164}
+      - {x: -44, y: -154}
+      - {x: -50, y: -146}
+      - {x: -38, y: -136}
+      - {x: -38, y: -116}
+      - {x: -44, y: -106}
+      - {x: -50, y: -98}
+      - {x: -38, y: -88}
+      - {x: -38, y: -68}
+      - {x: -44, y: -58}
+      - {x: -50, y: -50}
+      - {x: -38, y: -40}
+      - {x: -38, y: -20}
+      - {x: -44, y: -10}
+      - {x: -50, y: -2}
+      - {x: -47, y: 4}
+      - {x: -38, y: 8}
+      - {x: -38, y: 28}
+      - {x: -44, y: 38}
+      - {x: -50, y: 46}
+      - {x: -47, y: 52}
+      - {x: -38, y: 56}
+      - {x: -38, y: 76}
+      - {x: -44, y: 86}
+      - {x: -50, y: 94}
+      - {x: -47, y: 100}
+      - {x: -38, y: 104}
+      - {x: -38, y: 124}
+      - {x: -44, y: 134}
+      - {x: -50, y: 142}
+      - {x: -47, y: 148}
+      - {x: -38, y: 152}
+      - {x: -38, y: 172}
+      - {x: -44, y: 182}
+      - {x: -50, y: 190}
+      - {x: -47, y: 196}
+      - {x: -38, y: 200}
+      - {x: -38, y: 220}
+      - {x: -44, y: 230}
+      - {x: -50, y: 238}
+      - {x: -47, y: 244}
+      - {x: -38, y: 248}
+      - {x: -38, y: 268}
+      - {x: -44, y: 278}
+      - {x: -50, y: 286}
+      - {x: -56, y: 288}
+      - {x: -75, y: 288}
+      - {x: -80, y: 286}
+      - {x: -84, y: 281}
+      - {x: -92, y: 288}
+      - {x: -136, y: 288}
+      - {x: -138, y: 286}
+      - {x: -138, y: 274}
+      - {x: -130, y: 268}
+      - {x: -123, y: 265}
+      - {x: -111, y: 251}
+      - {x: -89, y: 257}
+      - {x: -82, y: 248}
+      - {x: -74, y: 241}
+      - {x: -80, y: 238}
+      - {x: -84, y: 233}
+      - {x: -94, y: 243}
+      - {x: -112, y: 242}
+      - {x: -117, y: 238}
+      - {x: -125, y: 243}
+      - {x: -133, y: 242}
+      - {x: -138, y: 239}
+      - {x: -138, y: 227}
+      - {x: -130, y: 220}
+      - {x: -110, y: 205}
+      - {x: -95, y: 206}
+      - {x: -89, y: 210}
+      - {x: -77, y: 195}
+      - {x: -84, y: 185}
+      - {x: -94, y: 194}
+      - {x: -111, y: 193}
+      - {x: -125, y: 195}
+      - {x: -133, y: 194}
+      - {x: -138, y: 191}
+      - {x: -138, y: 179}
+      - {x: -130, y: 172}
+      - {x: -110, y: 157}
+      - {x: -95, y: 158}
+      - {x: -89, y: 162}
+      - {x: -77, y: 147}
+      - {x: -84, y: 137}
+      - {x: -94, y: 146}
+      - {x: -111, y: 145}
+      - {x: -125, y: 147}
+      - {x: -133, y: 146}
+      - {x: -138, y: 143}
+      - {x: -138, y: 131}
+      - {x: -130, y: 124}
+      - {x: -110, y: 109}
+      - {x: -95, y: 110}
+      - {x: -89, y: 114}
+      - {x: -77, y: 99}
+      - {x: -84, y: 89}
+      - {x: -94, y: 98}
+      - {x: -111, y: 97}
+      - {x: -117, y: 94}
+      - {x: -125, y: 99}
+      - {x: -133, y: 98}
+      - {x: -138, y: 95}
+      - {x: -138, y: 83}
+      - {x: -130, y: 76}
+      - {x: -110, y: 61}
+      - {x: -95, y: 62}
+      - {x: -89, y: 66}
+      - {x: -77, y: 51}
+      - {x: -84, y: 41}
+      - {x: -94, y: 50}
+      - {x: -111, y: 49}
+      - {x: -117, y: 46}
+      - {x: -125, y: 51}
+      - {x: -133, y: 50}
+      - {x: -138, y: 47}
+      - {x: -138, y: 35}
+      - {x: -130, y: 28}
+      - {x: -110, y: 13}
+      - {x: -95, y: 14}
+      - {x: -89, y: 18}
+      - {x: -77, y: 3}
+      - {x: -84, y: -7}
+      - {x: -94, y: 2}
+      - {x: -111, y: 1}
+      - {x: -117, y: -2}
+      - {x: -125, y: 3}
+      - {x: -133, y: 2}
+      - {x: -138, y: -1}
+      - {x: -138, y: -14}
+      - {x: -130, y: -20}
+      - {x: -123, y: -22}
+      - {x: -111, y: -36}
+      - {x: -96, y: -33}
+      - {x: -89, y: -30}
+      - {x: -81, y: -39}
+      - {x: -74, y: -47}
+      - {x: -83, y: -52}
+      - {x: -87, y: -54}
+      - {x: -94, y: -46}
+      - {x: -111, y: -47}
+      - {x: -117, y: -50}
+      - {x: -125, y: -45}
+      - {x: -133, y: -46}
+      - {x: -137, y: -48}
+      - {x: -138, y: -50}
+      - {x: -138, y: -62}
+      - {x: -130, y: -68}
+      - {x: -123, y: -70}
+      - {x: -111, y: -84}
+      - {x: -96, y: -81}
+      - {x: -89, y: -78}
+      - {x: -81, y: -87}
+      - {x: -74, y: -95}
+      - {x: -83, y: -100}
+      - {x: -87, y: -102}
+      - {x: -94, y: -94}
+      - {x: -111, y: -95}
+      - {x: -117, y: -98}
+      - {x: -125, y: -93}
+      - {x: -133, y: -94}
+      - {x: -137, y: -96}
+      - {x: -138, y: -98}
+      - {x: -138, y: -110}
+      - {x: -130, y: -116}
+      - {x: -123, y: -118}
+      - {x: -111, y: -132}
+      - {x: -96, y: -129}
+      - {x: -89, y: -126}
+      - {x: -81, y: -135}
+      - {x: -74, y: -143}
+      - {x: -83, y: -148}
+      - {x: -87, y: -150}
+      - {x: -94, y: -142}
+      - {x: -111, y: -143}
+      - {x: -117, y: -146}
+      - {x: -125, y: -141}
+      - {x: -133, y: -142}
+      - {x: -137, y: -144}
+      - {x: -138, y: -146}
+      - {x: -138, y: -158}
+      - {x: -130, y: -164}
+      - {x: -123, y: -167}
+      - {x: -111, y: -180}
+      - {x: -96, y: -177}
+      - {x: -89, y: -174}
+      - {x: -77, y: -189}
+      - {x: -83, y: -196}
+      - {x: -87, y: -198}
+      - {x: -95, y: -190}
+      - {x: -100, y: -190}
+      - {x: -111, y: -191}
+      - {x: -125, y: -189}
+      - {x: -133, y: -190}
+      - {x: -138, y: -193}
+      - {x: -138, y: -205}
+      - {x: -134, y: -209}
+      - {x: -124, y: -215}
+      - {x: -113, y: -225}
+      - {x: -110, y: -227}
+      - {x: -95, y: -226}
+      - {x: -89, y: -222}
+      - {x: -77, y: -237}
+      - {x: -84, y: -247}
+      - {x: -95, y: -238}
+      - {x: -100, y: -238}
+      - {x: -111, y: -239}
+      - {x: -125, y: -237}
+      - {x: -133, y: -238}
+      - {x: -138, y: -239}
+      - {x: -138, y: -253}
+      - {x: -130, y: -260}
+      - {x: -124, y: -262}
+      - {x: -110, y: -275}
+      - {x: -95, y: -274}
+      - {x: -89, y: -270}
+      - {x: -77, y: -284}
+      - {x: -68, y: -288}
+      - {x: -49, y: -288}
+      - {x: -38, y: -280}
+      - {x: -38, y: -260}
+      - {x: -44, y: -250}
+    - - {x: 46, y: -237}
+      - {x: 58, y: -218}
+      - {x: 58, y: -204}
+      - {x: 57, y: -195}
+      - {x: 51, y: -189}
+      - {x: 58, y: -168}
+      - {x: 58, y: -156}
+      - {x: 53, y: -143}
+      - {x: 46, y: -141}
+      - {x: 58, y: -120}
+      - {x: 58, y: -108}
+      - {x: 53, y: -95}
+      - {x: 46, y: -93}
+      - {x: 58, y: -74}
+      - {x: 58, y: -60}
+      - {x: 57, y: -51}
+      - {x: 51, y: -45}
+      - {x: 46, y: -45}
+      - {x: 58, y: -26}
+      - {x: 58, y: -12}
+      - {x: 57, y: -3}
+      - {x: 51, y: 3}
+      - {x: 58, y: 21}
+      - {x: 58, y: 36}
+      - {x: 57, y: 45}
+      - {x: 51, y: 51}
+      - {x: 46, y: 51}
+      - {x: 58, y: 70}
+      - {x: 58, y: 84}
+      - {x: 57, y: 93}
+      - {x: 51, y: 99}
+      - {x: 46, y: 99}
+      - {x: 58, y: 118}
+      - {x: 58, y: 132}
+      - {x: 57, y: 141}
+      - {x: 51, y: 147}
+      - {x: 46, y: 147}
+      - {x: 58, y: 166}
+      - {x: 58, y: 180}
+      - {x: 57, y: 189}
+      - {x: 51, y: 195}
+      - {x: 58, y: 216}
+      - {x: 58, y: 228}
+      - {x: 53, y: 241}
+      - {x: 46, y: 243}
+      - {x: 58, y: 260}
+      - {x: 58, y: 279}
+      - {x: 57, y: 285}
+      - {x: 54, y: 288}
+      - {x: 39, y: 288}
+      - {x: 22, y: 269}
+      - {x: 22, y: 249}
+      - {x: 23, y: 244}
+      - {x: 35, y: 232}
+      - {x: 26, y: 223}
+      - {x: 22, y: 218}
+      - {x: 22, y: 205}
+      - {x: 23, y: 196}
+      - {x: 35, y: 184}
+      - {x: 26, y: 175}
+      - {x: 22, y: 170}
+      - {x: 22, y: 157}
+      - {x: 23, y: 148}
+      - {x: 35, y: 136}
+      - {x: 26, y: 127}
+      - {x: 22, y: 122}
+      - {x: 22, y: 109}
+      - {x: 23, y: 100}
+      - {x: 35, y: 88}
+      - {x: 26, y: 79}
+      - {x: 22, y: 74}
+      - {x: 22, y: 61}
+      - {x: 23, y: 52}
+      - {x: 35, y: 40}
+      - {x: 26, y: 31}
+      - {x: 22, y: 26}
+      - {x: 22, y: 13}
+      - {x: 23, y: 4}
+      - {x: 35, y: -8}
+      - {x: 24, y: -16}
+      - {x: 22, y: -23}
+      - {x: 22, y: -43}
+      - {x: 23, y: -45}
+      - {x: 33, y: -56}
+      - {x: 24, y: -64}
+      - {x: 22, y: -71}
+      - {x: 22, y: -91}
+      - {x: 23, y: -93}
+      - {x: 33, y: -104}
+      - {x: 24, y: -112}
+      - {x: 22, y: -119}
+      - {x: 22, y: -139}
+      - {x: 23, y: -141}
+      - {x: 33, y: -152}
+      - {x: 24, y: -160}
+      - {x: 22, y: -167}
+      - {x: 22, y: -187}
+      - {x: 23, y: -189}
+      - {x: 33, y: -200}
+      - {x: 24, y: -208}
+      - {x: 22, y: -215}
+      - {x: 22, y: -235}
+      - {x: 23, y: -237}
+      - {x: 32, y: -248}
+      - {x: 22, y: -262}
+      - {x: 22, y: -276}
+      - {x: 26, y: -288}
+      - {x: 46, y: -288}
+      - {x: 58, y: -270}
+      - {x: 58, y: -252}
+      - {x: 55, y: -237}
+    - - {x: 145, y: -245}
+      - {x: 133, y: -242}
+      - {x: 121, y: -242}
+      - {x: 118, y: -245}
+      - {x: 118, y: -256}
+      - {x: 122, y: -265}
+      - {x: 129, y: -262}
+      - {x: 126, y: -274}
+      - {x: 128, y: -284}
+      - {x: 132, y: -286}
+      - {x: 145, y: -286}
+      - {x: 152, y: -278}
+      - {x: 152, y: -253}
+    - - {x: 18, y: -238}
+      - {x: 8, y: -238}
+      - {x: 4, y: -239}
+      - {x: -5, y: -258}
+      - {x: -6, y: -261}
+      - {x: -6, y: -271}
+      - {x: -2, y: -274}
+      - {x: 7, y: -274}
+      - {x: 13, y: -273}
+      - {x: 21, y: -259}
+      - {x: 22, y: -253}
+      - {x: 21, y: -244}
+    - - {x: 113, y: -239}
+      - {x: 105, y: -238}
+      - {x: 93, y: -238}
+      - {x: 90, y: -243}
+      - {x: 90, y: -261}
+      - {x: 103, y: -274}
+      - {x: 113, y: -274}
+      - {x: 118, y: -269}
+      - {x: 118, y: -251}
+      - {x: 117, y: -245}
+    - - {x: -26, y: -263}
+      - {x: -22, y: -270}
+      - {x: -10, y: -270}
+      - {x: -6, y: -269}
+      - {x: -6, y: -259}
+      - {x: -9, y: -245}
+      - {x: -13, y: -242}
+      - {x: -21, y: -242}
+      - {x: -26, y: -247}
+    - - {x: -34, y: -238}
+      - {x: -38, y: -243}
+      - {x: -38, y: -252}
+      - {x: -35, y: -258}
+      - {x: -30, y: -258}
+      - {x: -26, y: -253}
+      - {x: -26, y: -239}
+      - {x: -28, y: -238}
+    - - {x: 70, y: -257}
+      - {x: 71, y: -258}
+      - {x: 81, y: -258}
+      - {x: 90, y: -252}
+      - {x: 90, y: -238}
+      - {x: 75, y: -238}
+      - {x: 70, y: -239}
+    - - {x: 66, y: -238}
+      - {x: 65, y: -238}
+      - {x: 59, y: -242}
+      - {x: 58, y: -246}
+      - {x: 58, y: -255}
+      - {x: 66, y: -255}
+      - {x: 70, y: -252}
+      - {x: 70, y: -242}
+    - - {x: -148, y: -242}
+      - {x: -150, y: -245}
+      - {x: -150, y: -252}
+      - {x: -149, y: -254}
+      - {x: -141, y: -254}
+      - {x: -138, y: -253}
+      - {x: -138, y: -246}
+      - {x: -142, y: -242}
+    - - {x: 145, y: -197}
+      - {x: 132, y: -194}
+      - {x: 122, y: -194}
+      - {x: 118, y: -201}
+      - {x: 118, y: -214}
+      - {x: 127, y: -216}
+      - {x: 126, y: -226}
+      - {x: 128, y: -236}
+      - {x: 132, y: -238}
+      - {x: 145, y: -238}
+      - {x: 152, y: -230}
+      - {x: 152, y: -205}
+    - - {x: 18, y: -190}
+      - {x: 2, y: -190}
+      - {x: -6, y: -212}
+      - {x: -6, y: -225}
+      - {x: -3, y: -226}
+      - {x: 7, y: -226}
+      - {x: 13, y: -225}
+      - {x: 21, y: -211}
+      - {x: 22, y: -205}
+      - {x: 21, y: -196}
+    - - {x: 105, y: -190}
+      - {x: 95, y: -190}
+      - {x: 90, y: -192}
+      - {x: 90, y: -213}
+      - {x: 92, y: -220}
+      - {x: 103, y: -226}
+      - {x: 113, y: -226}
+      - {x: 118, y: -220}
+      - {x: 118, y: -196}
+    - - {x: -26, y: -214}
+      - {x: -22, y: -222}
+      - {x: -6, y: -222}
+      - {x: -6, y: -209}
+      - {x: -9, y: -197}
+      - {x: -13, y: -194}
+      - {x: -20, y: -194}
+      - {x: -26, y: -199}
+    - - {x: -34, y: -190}
+      - {x: -38, y: -197}
+      - {x: -38, y: -204}
+      - {x: -33, y: -210}
+      - {x: -30, y: -210}
+      - {x: -26, y: -205}
+      - {x: -26, y: -191}
+      - {x: -28, y: -190}
+    - - {x: 83, y: -190}
+      - {x: 78, y: -190}
+      - {x: 71, y: -194}
+      - {x: 70, y: -200}
+      - {x: 70, y: -209}
+      - {x: 71, y: -210}
+      - {x: 81, y: -210}
+      - {x: 90, y: -204}
+      - {x: 90, y: -192}
+      - {x: 88, y: -191}
+    - - {x: 66, y: -190}
+      - {x: 65, y: -190}
+      - {x: 59, y: -194}
+      - {x: 58, y: -198}
+      - {x: 58, y: -207}
+      - {x: 66, y: -207}
+      - {x: 70, y: -204}
+      - {x: 70, y: -194}
+    - - {x: -149, y: -194}
+      - {x: -150, y: -195}
+      - {x: -150, y: -201}
+      - {x: -148, y: -206}
+      - {x: -139, y: -206}
+      - {x: -138, y: -205}
+      - {x: -138, y: -195}
+      - {x: -141, y: -194}
+    - - {x: 145, y: -149}
+      - {x: 133, y: -146}
+      - {x: 121, y: -146}
+      - {x: 118, y: -149}
+      - {x: 118, y: -160}
+      - {x: 122, y: -169}
+      - {x: 129, y: -166}
+      - {x: 126, y: -178}
+      - {x: 128, y: -188}
+      - {x: 132, y: -190}
+      - {x: 145, y: -190}
+      - {x: 152, y: -182}
+      - {x: 152, y: -157}
+    - - {x: 18, y: -142}
+      - {x: 8, y: -142}
+      - {x: 4, y: -143}
+      - {x: -5, y: -162}
+      - {x: -6, y: -165}
+      - {x: -6, y: -175}
+      - {x: -2, y: -178}
+      - {x: 7, y: -178}
+      - {x: 13, y: -177}
+      - {x: 21, y: -163}
+      - {x: 22, y: -157}
+      - {x: 21, y: -148}
+    - - {x: 108, y: -142}
+      - {x: 95, y: -142}
+      - {x: 90, y: -147}
+      - {x: 90, y: -165}
+      - {x: 102, y: -178}
+      - {x: 113, y: -178}
+      - {x: 118, y: -172}
+      - {x: 118, y: -153}
+      - {x: 117, y: -148}
+    - - {x: -26, y: -167}
+      - {x: -21, y: -174}
+      - {x: -10, y: -174}
+      - {x: -6, y: -173}
+      - {x: -6, y: -161}
+      - {x: -9, y: -149}
+      - {x: -13, y: -146}
+      - {x: -20, y: -146}
+      - {x: -26, y: -153}
+    - - {x: -34, y: -142}
+      - {x: -37, y: -145}
+      - {x: -38, y: -151}
+      - {x: -38, y: -158}
+      - {x: -33, y: -162}
+      - {x: -30, y: -162}
+      - {x: -26, y: -157}
+      - {x: -26, y: -143}
+      - {x: -29, y: -142}
+    - - {x: 75, y: -142}
+      - {x: 70, y: -149}
+      - {x: 70, y: -160}
+      - {x: 72, y: -162}
+      - {x: 81, y: -162}
+      - {x: 90, y: -157}
+      - {x: 90, y: -143}
+      - {x: 87, y: -142}
+    - - {x: 68, y: -142}
+      - {x: 65, y: -142}
+      - {x: 58, y: -145}
+      - {x: 58, y: -159}
+      - {x: 66, y: -159}
+      - {x: 70, y: -156}
+      - {x: 70, y: -145}
+    - - {x: -148, y: -146}
+      - {x: -150, y: -148}
+      - {x: -150, y: -154}
+      - {x: -149, y: -158}
+      - {x: -142, y: -158}
+      - {x: -138, y: -156}
+      - {x: -138, y: -151}
+      - {x: -140, y: -147}
+      - {x: -143, y: -146}
+    - - {x: 124, y: -98}
+      - {x: 118, y: -105}
+      - {x: 118, y: -110}
+      - {x: 122, y: -119}
+      - {x: 129, y: -118}
+      - {x: 126, y: -130}
+      - {x: 128, y: -140}
+      - {x: 132, y: -142}
+      - {x: 145, y: -142}
+      - {x: 152, y: -136}
+      - {x: 152, y: -107}
+      - {x: 135, y: -98}
+    - - {x: 21, y: -100}
+      - {x: 18, y: -94}
+      - {x: 8, y: -94}
+      - {x: 4, y: -95}
+      - {x: -5, y: -114}
+      - {x: -6, y: -117}
+      - {x: -6, y: -127}
+      - {x: -1, y: -130}
+      - {x: 7, y: -130}
+      - {x: 13, y: -129}
+      - {x: 21, y: -115}
+      - {x: 22, y: -109}
+    - - {x: 108, y: -94}
+      - {x: 93, y: -94}
+      - {x: 90, y: -99}
+      - {x: 90, y: -117}
+      - {x: 93, y: -123}
+      - {x: 102, y: -130}
+      - {x: 116, y: -130}
+      - {x: 118, y: -123}
+      - {x: 118, y: -106}
+      - {x: 116, y: -101}
+    - - {x: -23, y: -98}
+      - {x: -26, y: -102}
+      - {x: -26, y: -118}
+      - {x: -22, y: -126}
+      - {x: -10, y: -126}
+      - {x: -6, y: -124}
+      - {x: -6, y: -104}
+      - {x: -11, y: -98}
+    - - {x: -34, y: -94}
+      - {x: -37, y: -97}
+      - {x: -38, y: -103}
+      - {x: -38, y: -110}
+      - {x: -33, y: -114}
+      - {x: -30, y: -114}
+      - {x: -26, y: -109}
+      - {x: -26, y: -95}
+      - {x: -29, y: -94}
+    - - {x: 75, y: -94}
+      - {x: 70, y: -101}
+      - {x: 70, y: -112}
+      - {x: 72, y: -114}
+      - {x: 81, y: -114}
+      - {x: 90, y: -109}
+      - {x: 90, y: -95}
+      - {x: 87, y: -94}
+    - - {x: 68, y: -94}
+      - {x: 65, y: -94}
+      - {x: 58, y: -97}
+      - {x: 58, y: -111}
+      - {x: 66, y: -111}
+      - {x: 70, y: -108}
+      - {x: 70, y: -97}
+    - - {x: -148, y: -98}
+      - {x: -150, y: -100}
+      - {x: -150, y: -106}
+      - {x: -149, y: -110}
+      - {x: -142, y: -110}
+      - {x: -138, y: -108}
+      - {x: -138, y: -103}
+      - {x: -140, y: -99}
+      - {x: -143, y: -98}
+    - - {x: 124, y: -50}
+      - {x: 118, y: -57}
+      - {x: 118, y: -62}
+      - {x: 122, y: -71}
+      - {x: 129, y: -70}
+      - {x: 126, y: -82}
+      - {x: 128, y: -92}
+      - {x: 132, y: -94}
+      - {x: 145, y: -94}
+      - {x: 152, y: -88}
+      - {x: 152, y: -59}
+      - {x: 135, y: -50}
+    - - {x: 21, y: -52}
+      - {x: 18, y: -46}
+      - {x: 8, y: -46}
+      - {x: 4, y: -47}
+      - {x: -5, y: -66}
+      - {x: -6, y: -69}
+      - {x: -6, y: -79}
+      - {x: -1, y: -82}
+      - {x: 7, y: -82}
+      - {x: 13, y: -81}
+      - {x: 21, y: -67}
+      - {x: 22, y: -61}
+    - - {x: 108, y: -46}
+      - {x: 93, y: -46}
+      - {x: 90, y: -51}
+      - {x: 90, y: -69}
+      - {x: 93, y: -75}
+      - {x: 102, y: -82}
+      - {x: 116, y: -82}
+      - {x: 118, y: -75}
+      - {x: 118, y: -58}
+      - {x: 116, y: -53}
+    - - {x: -23, y: -50}
+      - {x: -26, y: -54}
+      - {x: -26, y: -70}
+      - {x: -22, y: -78}
+      - {x: -10, y: -78}
+      - {x: -6, y: -76}
+      - {x: -6, y: -56}
+      - {x: -11, y: -50}
+    - - {x: -34, y: -46}
+      - {x: -37, y: -49}
+      - {x: -38, y: -55}
+      - {x: -38, y: -62}
+      - {x: -33, y: -66}
+      - {x: -30, y: -66}
+      - {x: -26, y: -61}
+      - {x: -26, y: -47}
+      - {x: -29, y: -46}
+    - - {x: 75, y: -46}
+      - {x: 70, y: -53}
+      - {x: 70, y: -64}
+      - {x: 72, y: -66}
+      - {x: 81, y: -66}
+      - {x: 90, y: -61}
+      - {x: 90, y: -47}
+      - {x: 87, y: -46}
+    - - {x: 68, y: -46}
+      - {x: 65, y: -46}
+      - {x: 58, y: -49}
+      - {x: 58, y: -63}
+      - {x: 66, y: -63}
+      - {x: 70, y: -60}
+      - {x: 70, y: -49}
+    - - {x: -148, y: -50}
+      - {x: -150, y: -52}
+      - {x: -150, y: -58}
+      - {x: -149, y: -62}
+      - {x: -142, y: -62}
+      - {x: -138, y: -60}
+      - {x: -138, y: -55}
+      - {x: -140, y: -51}
+      - {x: -143, y: -50}
+    - - {x: 124, y: -2}
+      - {x: 118, y: -6}
+      - {x: 118, y: -15}
+      - {x: 121, y: -25}
+      - {x: 129, y: -22}
+      - {x: 126, y: -34}
+      - {x: 128, y: -44}
+      - {x: 132, y: -46}
+      - {x: 145, y: -46}
+      - {x: 152, y: -38}
+      - {x: 152, y: -12}
+      - {x: 135, y: -2}
+    - - {x: 8, y: 2}
+      - {x: 4, y: 1}
+      - {x: -5, y: -18}
+      - {x: -6, y: -21}
+      - {x: -6, y: -31}
+      - {x: -1, y: -34}
+      - {x: 19, y: -34}
+      - {x: 22, y: -22}
+      - {x: 22, y: 1}
+      - {x: 21, y: 2}
+    - - {x: 94, y: 2}
+      - {x: 90, y: -3}
+      - {x: 90, y: -21}
+      - {x: 94, y: -34}
+      - {x: 118, y: -34}
+      - {x: 118, y: -8}
+      - {x: 116, y: 2}
+    - - {x: -13, y: -2}
+      - {x: -21, y: -2}
+      - {x: -26, y: -7}
+      - {x: -26, y: -22}
+      - {x: -22, y: -30}
+      - {x: -10, y: -30}
+      - {x: -6, y: -29}
+      - {x: -6, y: -21}
+      - {x: -9, y: -5}
+    - - {x: -29, y: 2}
+      - {x: -34, y: 2}
+      - {x: -38, y: -3}
+      - {x: -38, y: -12}
+      - {x: -35, y: -18}
+      - {x: -30, y: -18}
+      - {x: -26, y: -13}
+      - {x: -26, y: 1}
+    - - {x: 78, y: 2}
+      - {x: 71, y: -2}
+      - {x: 70, y: -8}
+      - {x: 70, y: -17}
+      - {x: 73, y: -18}
+      - {x: 85, y: -18}
+      - {x: 90, y: -7}
+      - {x: 90, y: 1}
+      - {x: 84, y: 2}
+    - - {x: 66, y: 2}
+      - {x: 65, y: 2}
+      - {x: 59, y: -2}
+      - {x: 58, y: -6}
+      - {x: 58, y: -15}
+      - {x: 66, y: -15}
+      - {x: 70, y: -12}
+      - {x: 70, y: -2}
+    - - {x: -146, y: -2}
+      - {x: -150, y: -4}
+      - {x: -150, y: -11}
+      - {x: -149, y: -14}
+      - {x: -140, y: -14}
+      - {x: -138, y: -13}
+      - {x: -138, y: -5}
+      - {x: -141, y: -2}
+    - - {x: 124, y: 46}
+      - {x: 118, y: 42}
+      - {x: 118, y: 33}
+      - {x: 121, y: 23}
+      - {x: 129, y: 26}
+      - {x: 126, y: 9}
+      - {x: 131, y: 2}
+      - {x: 145, y: 2}
+      - {x: 152, y: 10}
+      - {x: 152, y: 36}
+      - {x: 135, y: 46}
+    - - {x: 8, y: 50}
+      - {x: 4, y: 49}
+      - {x: -5, y: 30}
+      - {x: -6, y: 27}
+      - {x: -6, y: 17}
+      - {x: -1, y: 14}
+      - {x: 19, y: 14}
+      - {x: 22, y: 26}
+      - {x: 22, y: 49}
+      - {x: 21, y: 50}
+    - - {x: 108, y: 50}
+      - {x: 92, y: 50}
+      - {x: 90, y: 47}
+      - {x: 90, y: 24}
+      - {x: 94, y: 15}
+      - {x: 99, y: 14}
+      - {x: 116, y: 14}
+      - {x: 118, y: 19}
+      - {x: 118, y: 36}
+      - {x: 116, y: 43}
+    - - {x: -13, y: 46}
+      - {x: -21, y: 46}
+      - {x: -26, y: 41}
+      - {x: -26, y: 26}
+      - {x: -22, y: 18}
+      - {x: -10, y: 18}
+      - {x: -6, y: 19}
+      - {x: -6, y: 27}
+      - {x: -9, y: 43}
+    - - {x: -29, y: 50}
+      - {x: -34, y: 50}
+      - {x: -38, y: 45}
+      - {x: -38, y: 36}
+      - {x: -35, y: 30}
+      - {x: -30, y: 30}
+      - {x: -26, y: 35}
+      - {x: -26, y: 49}
+    - - {x: 78, y: 50}
+      - {x: 71, y: 46}
+      - {x: 70, y: 40}
+      - {x: 70, y: 31}
+      - {x: 73, y: 30}
+      - {x: 85, y: 30}
+      - {x: 90, y: 41}
+      - {x: 90, y: 49}
+      - {x: 84, y: 50}
+    - - {x: 66, y: 50}
+      - {x: 65, y: 50}
+      - {x: 59, y: 46}
+      - {x: 58, y: 42}
+      - {x: 58, y: 33}
+      - {x: 66, y: 33}
+      - {x: 70, y: 36}
+      - {x: 70, y: 46}
+    - - {x: -146, y: 46}
+      - {x: -150, y: 44}
+      - {x: -150, y: 37}
+      - {x: -149, y: 34}
+      - {x: -140, y: 34}
+      - {x: -138, y: 35}
+      - {x: -138, y: 43}
+      - {x: -141, y: 46}
+    - - {x: 124, y: 94}
+      - {x: 118, y: 90}
+      - {x: 118, y: 81}
+      - {x: 121, y: 71}
+      - {x: 129, y: 74}
+      - {x: 126, y: 57}
+      - {x: 131, y: 50}
+      - {x: 145, y: 50}
+      - {x: 152, y: 58}
+      - {x: 152, y: 84}
+      - {x: 135, y: 94}
+    - - {x: 8, y: 98}
+      - {x: 4, y: 97}
+      - {x: -5, y: 78}
+      - {x: -6, y: 75}
+      - {x: -6, y: 65}
+      - {x: -1, y: 62}
+      - {x: 19, y: 62}
+      - {x: 22, y: 74}
+      - {x: 22, y: 97}
+      - {x: 21, y: 98}
+    - - {x: 108, y: 98}
+      - {x: 92, y: 98}
+      - {x: 90, y: 95}
+      - {x: 90, y: 72}
+      - {x: 94, y: 63}
+      - {x: 99, y: 62}
+      - {x: 116, y: 62}
+      - {x: 118, y: 67}
+      - {x: 118, y: 84}
+      - {x: 116, y: 91}
+    - - {x: -13, y: 94}
+      - {x: -21, y: 94}
+      - {x: -26, y: 89}
+      - {x: -26, y: 74}
+      - {x: -22, y: 66}
+      - {x: -10, y: 66}
+      - {x: -6, y: 67}
+      - {x: -6, y: 75}
+      - {x: -9, y: 91}
+    - - {x: -29, y: 98}
+      - {x: -34, y: 98}
+      - {x: -38, y: 93}
+      - {x: -38, y: 84}
+      - {x: -35, y: 78}
+      - {x: -30, y: 78}
+      - {x: -26, y: 83}
+      - {x: -26, y: 97}
+    - - {x: 78, y: 98}
+      - {x: 71, y: 94}
+      - {x: 70, y: 88}
+      - {x: 70, y: 79}
+      - {x: 73, y: 78}
+      - {x: 85, y: 78}
+      - {x: 90, y: 89}
+      - {x: 90, y: 97}
+      - {x: 84, y: 98}
+    - - {x: 66, y: 98}
+      - {x: 65, y: 98}
+      - {x: 59, y: 94}
+      - {x: 58, y: 90}
+      - {x: 58, y: 81}
+      - {x: 66, y: 81}
+      - {x: 70, y: 84}
+      - {x: 70, y: 94}
+    - - {x: -146, y: 94}
+      - {x: -150, y: 92}
+      - {x: -150, y: 85}
+      - {x: -149, y: 82}
+      - {x: -140, y: 82}
+      - {x: -138, y: 83}
+      - {x: -138, y: 91}
+      - {x: -141, y: 94}
+    - - {x: 124, y: 142}
+      - {x: 118, y: 138}
+      - {x: 118, y: 129}
+      - {x: 121, y: 119}
+      - {x: 129, y: 122}
+      - {x: 126, y: 105}
+      - {x: 131, y: 98}
+      - {x: 145, y: 98}
+      - {x: 152, y: 106}
+      - {x: 152, y: 132}
+      - {x: 135, y: 142}
+    - - {x: 8, y: 146}
+      - {x: 4, y: 145}
+      - {x: -5, y: 126}
+      - {x: -6, y: 123}
+      - {x: -6, y: 113}
+      - {x: -1, y: 110}
+      - {x: 19, y: 110}
+      - {x: 22, y: 122}
+      - {x: 22, y: 145}
+      - {x: 21, y: 146}
+    - - {x: 108, y: 146}
+      - {x: 92, y: 146}
+      - {x: 90, y: 143}
+      - {x: 90, y: 120}
+      - {x: 94, y: 111}
+      - {x: 99, y: 110}
+      - {x: 116, y: 110}
+      - {x: 118, y: 115}
+      - {x: 118, y: 132}
+      - {x: 116, y: 139}
+    - - {x: -13, y: 142}
+      - {x: -21, y: 142}
+      - {x: -26, y: 137}
+      - {x: -26, y: 122}
+      - {x: -22, y: 114}
+      - {x: -10, y: 114}
+      - {x: -6, y: 115}
+      - {x: -6, y: 123}
+      - {x: -9, y: 139}
+    - - {x: -29, y: 146}
+      - {x: -34, y: 146}
+      - {x: -38, y: 141}
+      - {x: -38, y: 132}
+      - {x: -35, y: 126}
+      - {x: -30, y: 126}
+      - {x: -26, y: 131}
+      - {x: -26, y: 145}
+    - - {x: 78, y: 146}
+      - {x: 71, y: 142}
+      - {x: 70, y: 136}
+      - {x: 70, y: 127}
+      - {x: 73, y: 126}
+      - {x: 85, y: 126}
+      - {x: 90, y: 137}
+      - {x: 90, y: 145}
+      - {x: 84, y: 146}
+    - - {x: 66, y: 146}
+      - {x: 65, y: 146}
+      - {x: 59, y: 142}
+      - {x: 58, y: 138}
+      - {x: 58, y: 129}
+      - {x: 66, y: 129}
+      - {x: 70, y: 132}
+      - {x: 70, y: 142}
+    - - {x: -146, y: 142}
+      - {x: -150, y: 140}
+      - {x: -150, y: 133}
+      - {x: -149, y: 130}
+      - {x: -140, y: 130}
+      - {x: -138, y: 131}
+      - {x: -138, y: 139}
+      - {x: -141, y: 142}
+    - - {x: 124, y: 190}
+      - {x: 118, y: 186}
+      - {x: 118, y: 177}
+      - {x: 121, y: 167}
+      - {x: 129, y: 170}
+      - {x: 126, y: 153}
+      - {x: 131, y: 146}
+      - {x: 145, y: 146}
+      - {x: 152, y: 154}
+      - {x: 152, y: 180}
+      - {x: 135, y: 190}
+    - - {x: 8, y: 194}
+      - {x: 4, y: 193}
+      - {x: -5, y: 174}
+      - {x: -6, y: 171}
+      - {x: -6, y: 161}
+      - {x: -1, y: 158}
+      - {x: 19, y: 158}
+      - {x: 22, y: 170}
+      - {x: 22, y: 193}
+      - {x: 21, y: 194}
+    - - {x: 108, y: 194}
+      - {x: 92, y: 194}
+      - {x: 90, y: 191}
+      - {x: 90, y: 168}
+      - {x: 94, y: 159}
+      - {x: 99, y: 158}
+      - {x: 116, y: 158}
+      - {x: 118, y: 163}
+      - {x: 118, y: 180}
+      - {x: 116, y: 187}
+    - - {x: -13, y: 190}
+      - {x: -21, y: 190}
+      - {x: -26, y: 185}
+      - {x: -26, y: 170}
+      - {x: -22, y: 162}
+      - {x: -10, y: 162}
+      - {x: -6, y: 163}
+      - {x: -6, y: 171}
+      - {x: -9, y: 187}
+    - - {x: -29, y: 194}
+      - {x: -34, y: 194}
+      - {x: -38, y: 189}
+      - {x: -38, y: 180}
+      - {x: -35, y: 174}
+      - {x: -30, y: 174}
+      - {x: -26, y: 179}
+      - {x: -26, y: 193}
+    - - {x: 78, y: 194}
+      - {x: 71, y: 190}
+      - {x: 70, y: 184}
+      - {x: 70, y: 175}
+      - {x: 73, y: 174}
+      - {x: 85, y: 174}
+      - {x: 90, y: 185}
+      - {x: 90, y: 193}
+      - {x: 84, y: 194}
+    - - {x: 66, y: 194}
+      - {x: 65, y: 194}
+      - {x: 59, y: 190}
+      - {x: 58, y: 186}
+      - {x: 58, y: 177}
+      - {x: 66, y: 177}
+      - {x: 70, y: 180}
+      - {x: 70, y: 190}
+    - - {x: -146, y: 190}
+      - {x: -150, y: 188}
+      - {x: -150, y: 181}
+      - {x: -149, y: 178}
+      - {x: -140, y: 178}
+      - {x: -138, y: 179}
+      - {x: -138, y: 187}
+      - {x: -141, y: 190}
+    - - {x: 124, y: 238}
+      - {x: 118, y: 234}
+      - {x: 118, y: 225}
+      - {x: 121, y: 215}
+      - {x: 129, y: 218}
+      - {x: 126, y: 201}
+      - {x: 131, y: 194}
+      - {x: 145, y: 194}
+      - {x: 152, y: 202}
+      - {x: 152, y: 228}
+      - {x: 135, y: 238}
+    - - {x: 7, y: 242}
+      - {x: 4, y: 241}
+      - {x: -5, y: 222}
+      - {x: -6, y: 221}
+      - {x: -6, y: 207}
+      - {x: -4, y: 206}
+      - {x: 12, y: 206}
+      - {x: 22, y: 218}
+      - {x: 22, y: 234}
+      - {x: 19, y: 242}
+    - - {x: 108, y: 242}
+      - {x: 96, y: 242}
+      - {x: 90, y: 237}
+      - {x: 90, y: 217}
+      - {x: 102, y: 206}
+      - {x: 115, y: 206}
+      - {x: 118, y: 213}
+      - {x: 118, y: 230}
+      - {x: 116, y: 235}
+    - - {x: -26, y: 217}
+      - {x: -21, y: 210}
+      - {x: -10, y: 210}
+      - {x: -6, y: 211}
+      - {x: -6, y: 224}
+      - {x: -8, y: 235}
+      - {x: -13, y: 238}
+      - {x: -20, y: 238}
+      - {x: -26, y: 231}
+    - - {x: -34, y: 242}
+      - {x: -38, y: 238}
+      - {x: -38, y: 227}
+      - {x: -36, y: 222}
+      - {x: -31, y: 222}
+      - {x: -27, y: 224}
+      - {x: -26, y: 227}
+      - {x: -26, y: 241}
+      - {x: -29, y: 242}
+    - - {x: 70, y: 224}
+      - {x: 71, y: 222}
+      - {x: 82, y: 222}
+      - {x: 90, y: 228}
+      - {x: 90, y: 242}
+      - {x: 74, y: 242}
+      - {x: 70, y: 241}
+    - - {x: 68, y: 242}
+      - {x: 65, y: 242}
+      - {x: 58, y: 239}
+      - {x: 58, y: 225}
+      - {x: 66, y: 225}
+      - {x: 70, y: 228}
+      - {x: 70, y: 239}
+    - - {x: -146, y: 238}
+      - {x: -150, y: 236}
+      - {x: -150, y: 231}
+      - {x: -149, y: 226}
+      - {x: -140, y: 226}
+      - {x: -138, y: 227}
+      - {x: -138, y: 234}
+      - {x: -142, y: 238}
+    - - {x: 124, y: 286}
+      - {x: 118, y: 282}
+      - {x: 118, y: 273}
+      - {x: 121, y: 263}
+      - {x: 129, y: 266}
+      - {x: 126, y: 254}
+      - {x: 128, y: 244}
+      - {x: 132, y: 242}
+      - {x: 145, y: 242}
+      - {x: 152, y: 250}
+      - {x: 152, y: 276}
+      - {x: 135, y: 286}
+    - - {x: 4, y: 288}
+      - {x: -6, y: 269}
+      - {x: -6, y: 254}
+      - {x: 17, y: 254}
+      - {x: 20, y: 255}
+      - {x: 22, y: 262}
+      - {x: 22, y: 283}
+      - {x: 19, y: 288}
+    - - {x: 90, y: 288}
+      - {x: 90, y: 265}
+      - {x: 102, y: 254}
+      - {x: 114, y: 254}
+      - {x: 118, y: 260}
+      - {x: 118, y: 277}
+      - {x: 112, y: 288}
+    - - {x: -26, y: 265}
+      - {x: -23, y: 258}
+      - {x: -10, y: 258}
+      - {x: -6, y: 259}
+      - {x: -6, y: 270}
+      - {x: -8, y: 283}
+      - {x: -13, y: 286}
+      - {x: -21, y: 286}
+      - {x: -26, y: 281}
+    - - {x: -36, y: 288}
+      - {x: -38, y: 285}
+      - {x: -38, y: 276}
+      - {x: -35, y: 270}
+      - {x: -26, y: 270}
+      - {x: -26, y: 288}
+    - - {x: 74, y: 288}
+      - {x: 70, y: 283}
+      - {x: 70, y: 270}
+      - {x: 85, y: 270}
+      - {x: 90, y: 278}
+      - {x: 90, y: 288}
+    - - {x: 60, y: 288}
+      - {x: 58, y: 286}
+      - {x: 58, y: 274}
+      - {x: 60, y: 273}
+      - {x: 64, y: 273}
+      - {x: 70, y: 276}
+      - {x: 70, y: 288}
+    - - {x: -146, y: 286}
+      - {x: -150, y: 284}
+      - {x: -150, y: 279}
+      - {x: -149, y: 274}
+      - {x: -140, y: 274}
+      - {x: -138, y: 275}
+      - {x: -138, y: 282}
+      - {x: -142, y: 286}
   spritePackingTag: 
   userData: 
   assetBundleName: 
