@@ -31,8 +31,8 @@ public class GameController : MonoBehaviour {
 		lockedPositions = new List<Vector3>();
 		// not sure if GameController Start method will always run AFTER creation of all GameObjects
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
-        //allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit2"));
-        //allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit3"));
+        allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit1"));
+        allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit2"));
         spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
 
 		// lock units positions
@@ -214,16 +214,18 @@ public class GameController : MonoBehaviour {
             GUI.Box(new Rect(0, 0, 400, 100), "Space Station");
             if (GUI.Button(new Rect(10, 40, 40, 40), "Fr"))
             {
-
+                unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit"), new Vector3(1, 0, 0), Quaternion.identity);
+                allUnits.Add(unit);
             }
             if (GUI.Button(new Rect(50, 40, 40, 40), "Ft"))
             {
-                unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit"), new Vector3(1, 0, 0), Quaternion.identity);
+                unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit1"), new Vector3(1, 0, 0), Quaternion.identity);
                 allUnits.Add(unit);
             }
             if (GUI.Button(new Rect(90, 40, 40, 40), "Dt"))
             {
-                //Application.Quit();
+                unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit2"), new Vector3(1, 0, 0), Quaternion.identity);
+                allUnits.Add(unit);
             }
 
             GUI.EndGroup();

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Unit
   - SpaceStation
+  - Unit1
+  - Unit2
   layers:
   - Default
   - TransparentFX
