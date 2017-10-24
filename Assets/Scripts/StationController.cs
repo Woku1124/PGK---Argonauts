@@ -6,6 +6,7 @@ public class StationController : MonoBehaviour {
 
 	public bool isSelected;
 	private Attributes myAttributes;
+    public float Ore;
 
 	// Use this for initialization
 	void Start () {

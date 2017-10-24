@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - EnemyStation
   - Shot
+  - Asteroid
+  - Unit3
   layers:
   - Default
   - TransparentFX
