@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34635491}
   m_Layer: 0
-  m_Name: Bigger Spaceships
+  m_Name: Frigates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,10 +218,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 446688896}
-  - {fileID: 910369885}
-  - {fileID: 663234817}
-  - {fileID: 1334728748}
-  - {fileID: 1547677153}
   m_Father: {fileID: 1703907586}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -393,60 +389,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158897306}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &257750604
-Prefab:
+--- !u!1 &168848528
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 34635491}
-    m_Modifications:
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1354082281288604, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_Name
-      value: BiggerSpaceship (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-  m_IsPrefabParent: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 168848529}
+  m_Layer: 0
+  m_Name: Destroyers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &168848529
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 168848528}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1703907586}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &267526968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,11 +1284,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354082281288604, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
+      propertyPath: m_Name
+      value: Frigates
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
@@ -1496,60 +1470,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615230577}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &625396864
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 34635491}
-    m_Modifications:
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1354082281288604, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_Name
-      value: BiggerSpaceship (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &643879853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,11 +1661,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollingSpeed: 50
   moveCameraSpeed: 2
---- !u!4 &663234817 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539,
-    type: 2}
-  m_PrefabInternal: {fileID: 257750604}
 --- !u!1 &663741548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,11 +2767,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 902959409}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &910369885 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539,
-    type: 2}
-  m_PrefabInternal: {fileID: 952447982}
 --- !u!1 &945961293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,60 +2935,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 946922862}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &952447982
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 34635491}
-    m_Modifications:
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1354082281288604, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_Name
-      value: BiggerSpaceship (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &979646452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,11 +3790,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c0a2d311f250a64c931d0df373699f0, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1334728748 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539,
-    type: 2}
-  m_PrefabInternal: {fileID: 625396864}
 --- !u!1 &1415171956
 GameObject:
   m_ObjectHideFlags: 0
@@ -4023,60 +3874,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1415171956}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1415978753
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 34635491}
-    m_Modifications:
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1354082281288604, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_Name
-      value: BiggerSpaceship (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c5f675e8c46c45643b8a271de9cf2539, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1448341296
 GameObject:
   m_ObjectHideFlags: 0
@@ -4497,11 +4294,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1537126204}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1547677153 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4892610358176714, guid: c5f675e8c46c45643b8a271de9cf2539,
-    type: 2}
-  m_PrefabInternal: {fileID: 1415978753}
 --- !u!1 &1595627999
 GameObject:
   m_ObjectHideFlags: 0
@@ -5166,6 +4958,7 @@ Transform:
   m_Children:
   - {fileID: 811283849}
   - {fileID: 34635491}
+  - {fileID: 168848529}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

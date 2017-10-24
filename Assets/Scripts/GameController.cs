@@ -15,16 +15,25 @@ public class GameController : MonoBehaviour {
 	private Vector3 endSelectRectanglePosition;
 	private GameObject selectRectangle;
 	private GameObject spaceStation;
+    private GameObject unit;
 
-	// Use this for initialization
-	void Start () {
+    private float InterfaceX;
+    private float InterfaceY;
+    private float InterfaceWidth;
+    private float InterfaceHeight;
+
+
+    // Use this for initialization
+    void Start () {
 		isSelecting = false;
 
 		allUnits = new List<GameObject>();
 		lockedPositions = new List<Vector3>();
 		// not sure if GameController Start method will always run AFTER creation of all GameObjects
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
-		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
+        //allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit2"));
+        //allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit3"));
+        spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
 
 		// lock units positions
 		allUnits.ForEach(unit => { 
@@ -188,4 +197,40 @@ public class GameController : MonoBehaviour {
 		}
 		return false;
 	}
+    void OnGUI()
+    {
+    if (spaceStation.GetComponent<StationController>().isSelected) {
+            GUI.BeginGroup(new Rect(300, 300, 400, 100));
+
+            GUI.Box(new Rect(0, 0, 400, 100), "Space Station");
+            if (GUI.Button(new Rect(10, 40, 40, 40), "Fr"))
+            {
+
+            }
+            if (GUI.Button(new Rect(50, 40, 40, 40), "Ft"))
+            {
+                unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit"), new Vector3(1, 0, 0), Quaternion.identity);
+                allUnits.Add(unit);
+            }
+            if (GUI.Button(new Rect(90, 40, 40, 40), "Dt"))
+            {
+                //Application.Quit();
+            }
+
+            GUI.EndGroup();
+        }
+    }
+
+    bool IsMouseOnInterface () {
+        //to do 
+        return true;
+    }
 }
+
+
+
+
+
+
+
+
