@@ -15,7 +15,9 @@ public class GameController : MonoBehaviour {
 	private Vector3 endSelectRectanglePosition;
 	private GameObject selectRectangle;
 	private GameObject spaceStation;
+    private GameObject unit;
 
+<<<<<<< HEAD
 	public List<GameObject> enemyUnits;
 	private GameObject piratesStation;
 
@@ -23,6 +25,16 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+=======
+    private float InterfaceX;
+    private float InterfaceY;
+    private float InterfaceWidth;
+    private float InterfaceHeight;
+
+
+    // Use this for initialization
+    void Start () {
+>>>>>>> 8ffbc6cf1e7263107b3581cb86d835079da24d24
 		isSelecting = false;
 
 		allUnits = new List<GameObject>();
@@ -31,15 +43,21 @@ public class GameController : MonoBehaviour {
 		lockedPositions = new List<Vector3>();
 		// not sure if GameController Start method will always run AFTER creation of all GameObjects
 		allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit"));
+<<<<<<< HEAD
 		enemyUnits.AddRange (GameObject.FindGameObjectsWithTag ("Enemy"));
 		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
 		piratesStation = GameObject.FindGameObjectWithTag("EnemyStation");
 
 
+=======
+        //allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit2"));
+        //allUnits.AddRange(GameObject.FindGameObjectsWithTag("Unit3"));
+        spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
+>>>>>>> 8ffbc6cf1e7263107b3581cb86d835079da24d24
 
 		// lock units positions
 		allUnits.ForEach(unit => { 
-			unit.GetComponent<FighterController>().occupiedPositions.ForEach(position => {
+			unit.GetComponent<ShipController>().occupiedPositions.ForEach(position => {
 				lockedPositions.Add(position);
 			});
 		});
@@ -119,7 +137,7 @@ public class GameController : MonoBehaviour {
 		// checking all units coordinates in order to select the right ones
 		allUnits.ForEach(unit => {
 			if (IsInSelectRectangle(unit)) {
-				unit.GetComponent<FighterController>().isSelected = true;
+				unit.GetComponent<ShipController>().isSelected = true;
 				// temporary
 				unit.GetComponent<SpriteRenderer>().color = Color.green;
 
@@ -128,7 +146,7 @@ public class GameController : MonoBehaviour {
 				// we need to deselect space station in case if there is station selected
 				DeselectSpaceStation();
 			} else {
-				unit.GetComponent<FighterController>().isSelected = false;
+				unit.GetComponent<ShipController>().isSelected = false;
 				// temporary
 				unit.GetComponent<SpriteRenderer>().color = Color.white;
 			}
@@ -166,8 +184,17 @@ public class GameController : MonoBehaviour {
 	}
 
 	bool IsInSelectRectangle(GameObject obj) {
-		float objSizeX = obj.GetComponent<Attributes>().SizeX;
-		float objSizeY = obj.GetComponent<Attributes>().SizeY;
+		int objDirection = obj.GetComponent<Attributes>().direction;
+		float objSizeX;
+		float objSizeY;
+		if (objDirection == 0 || objDirection == 2) {
+			objSizeX = obj.GetComponent<Attributes>().SizeX;
+			objSizeY = obj.GetComponent<Attributes>().SizeY;
+		} else {
+			objSizeX = obj.GetComponent<Attributes>().SizeY;
+			objSizeY = obj.GetComponent<Attributes>().SizeX;
+		}
+
 		Vector3 leftBottom = new Vector3(obj.transform.position.x - objSizeX, obj.transform.position.y - objSizeY, 0.0f);
 		Vector3 leftTop = new Vector3(obj.transform.position.x - objSizeX, obj.transform.position.y + objSizeY, 0.0f);
 		Vector3 rightBottom = new Vector3(obj.transform.position.x + objSizeX, obj.transform.position.y - objSizeY, 0.0f);
@@ -214,4 +241,40 @@ public class GameController : MonoBehaviour {
 		}
 		return false;
 	}
+    void OnGUI()
+    {
+    if (spaceStation.GetComponent<StationController>().isSelected) {
+            GUI.BeginGroup(new Rect(300, 300, 400, 100));
+
+            GUI.Box(new Rect(0, 0, 400, 100), "Space Station");
+            if (GUI.Button(new Rect(10, 40, 40, 40), "Fr"))
+            {
+
+            }
+            if (GUI.Button(new Rect(50, 40, 40, 40), "Ft"))
+            {
+                unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit"), new Vector3(1, 0, 0), Quaternion.identity);
+                allUnits.Add(unit);
+            }
+            if (GUI.Button(new Rect(90, 40, 40, 40), "Dt"))
+            {
+                //Application.Quit();
+            }
+
+            GUI.EndGroup();
+        }
+    }
+
+    bool IsMouseOnInterface () {
+        //to do 
+        return true;
+    }
 }
+
+
+
+
+
+
+
+

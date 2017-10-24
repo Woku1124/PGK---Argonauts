@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FighterController : MonoBehaviour {
+public class ShipController : MonoBehaviour {
 
 	public float speed;
 	public bool isSelected;
 
 	public List<Vector3> occupiedPositions;
 
-	private int direction = 0; // 0 - up, 1 - right, 2 - down, 3 - left
 	private bool isMoving;
 	private Vector3 movePosition;
 	private GameController gameController;
+	private Attributes myAttributes;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +21,7 @@ public class FighterController : MonoBehaviour {
 		movePosition = new Vector3();
 		occupiedPositions = new List<Vector3>();
 		CalculateOccupiedPositions(transform.position);
+		myAttributes = GetComponent<Attributes>();
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	
@@ -78,14 +79,36 @@ public class FighterController : MonoBehaviour {
 		}
 	}
 
-	//TODO: It should be done better later.
+	// TODO: Optymalizacja (teraz to bardzo wolno dziala)
 	Vector3 FindFreeSpot(Vector3 mousePos) {
 		Vector3 freeSpot = mousePos;
 
-		if (isEnoughRoom(freeSpot) == false && freeSpot.Equals(transform.position) == false) {
-			// temporary solution
-			freeSpot.x++;
-			freeSpot = FindFreeSpot(freeSpot);
+		int iteration = 0;
+		int translation = 0;
+		int sign = 0;
+		while (isEnoughRoom(freeSpot) == false && freeSpot.Equals(transform.position) == false) {
+			int finalTranslation;
+
+			if (iteration % 2 == 0) {
+				translation++;
+			}
+			finalTranslation = (translation % 2 != 0) ? translation : -translation;
+			sign = (translation % 2 != 0) ? 1 : -1;
+
+			if (iteration % 2 == 0) {
+				for (int i = 0; i != finalTranslation; i += sign) {
+					freeSpot.y += i;
+					if (isEnoughRoom(freeSpot) || freeSpot.Equals(transform.position))
+						return freeSpot;
+				}
+			} else {
+				for (int i = 0; i != finalTranslation; i += sign) {
+					freeSpot.x += i;
+					if (isEnoughRoom(freeSpot) || freeSpot.Equals(transform.position))
+						return freeSpot;
+				}
+			}
+			iteration++;
 		}
 		return freeSpot;
 	}
@@ -94,39 +117,39 @@ public class FighterController : MonoBehaviour {
 	void CalculateDirection() {
 		if (movePosition.x >= transform.position.x && movePosition.y >= transform.position.y) {
 			if (movePosition.x - transform.position.x > movePosition.y - transform.position.y) {
-				direction = 1;
+				myAttributes.direction = 1;
 			} else {
-				direction = 0;
+				myAttributes.direction = 0;
 			}
 		} else if (movePosition.x >= transform.position.x && movePosition.y <= transform.position.y) {
 			if (movePosition.x - transform.position.x > transform.position.y - movePosition.y) {
-				direction = 1;
+				myAttributes.direction = 1;
 			} else {
-				direction = 2;
+				myAttributes.direction = 2;
 			}
 		} else if (movePosition.x <= transform.position.x && movePosition.y >= transform.position.y) {
 			if (transform.position.x - movePosition.x > movePosition.y - transform.position.y) {
-				direction = 3;
+				myAttributes.direction = 3;
 			} else {
-				direction = 0;
+				myAttributes.direction = 0;
 			}
 		} else if (movePosition.x <= transform.position.x && movePosition.y <= transform.position.y) {
 			if (transform.position.x - movePosition.x > transform.position.y - movePosition.y) {
-				direction = 3;
+				myAttributes.direction = 3;
 			} else {
-				direction = 2;
+				myAttributes.direction = 2;
 			}
 		}
 	}
 	// this is garbage but don't have time to make it better atm
 	void ChangeDirection() {
-		if (direction == 0) {
+		if (myAttributes.direction == 0) {
 			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)));
-		} else if (direction == 1) {
+		} else if (myAttributes.direction == 1) {
 			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 270.0f)));
-		} else if (direction == 2) {
+		} else if (myAttributes.direction == 2) {
 			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 180.0f)));
-		} else if (direction == 3) {
+		} else if (myAttributes.direction == 3) {
 			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 90.0f)));
 		}
 	}
@@ -137,12 +160,12 @@ public class FighterController : MonoBehaviour {
 		float horizontalSize;
 		float verticalSize;
 
-		if (direction == 0 || direction == 2) {
-			horizontalSize = GetComponent<Attributes>().SizeX;
-			verticalSize = GetComponent<Attributes>().SizeY;
+		if (myAttributes.direction == 0 || myAttributes.direction == 2) {
+			horizontalSize = myAttributes.SizeX;
+			verticalSize = myAttributes.SizeY;
 		} else {
-			horizontalSize = GetComponent<Attributes>().SizeY;
-			verticalSize = GetComponent<Attributes>().SizeX;
+			horizontalSize = myAttributes.SizeY;
+			verticalSize = myAttributes.SizeX;
 		}
 
 		float x = position.x - horizontalSize;
