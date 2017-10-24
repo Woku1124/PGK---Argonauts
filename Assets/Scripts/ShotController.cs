@@ -24,7 +24,7 @@ public class ShotController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag.Equals("Shot")) {
+		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Unit3") || other.gameObject.tag.Equals("Asteroid")) {
 			return;
 		}
 		// box colliders are used for actual ships and circle colliders for range

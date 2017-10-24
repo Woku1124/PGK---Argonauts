@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class HarvesterController : MonoBehaviour
 {
-
-
-    public float maxCapacity = 100f;
+    public float maxCapacity = 100.0f;
     public float resource;
     public StationController station;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -35,7 +34,7 @@ public class HarvesterController : MonoBehaviour
         if (other.gameObject.CompareTag("SpaceStation"))
         {
             station.Ore += resource;
-            resource = 0;
+            resource = 0.0f;
         }
     }
 }
