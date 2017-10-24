@@ -8,15 +8,21 @@ public class ShipController : MonoBehaviour {
 	public bool isSelected;
 
 	public List<Vector3> occupiedPositions;
+	public GameObject shot;
 
 	private bool isMoving;
+	private bool isAttacking;
+	private float nextFire;
 	private Vector3 movePosition;
 	private GameController gameController;
+	private GameObject attackingTarget;
 	private Attributes myAttributes;
+	private float shotMomentum = 2000.0f;
 
 	// Use this for initialization
 	void Start () {
 		isMoving = false;
+		isAttacking = false;
 		isSelected = false;
 		movePosition = new Vector3();
 		occupiedPositions = new List<Vector3>();
@@ -24,9 +30,29 @@ public class ShipController : MonoBehaviour {
 		myAttributes = GetComponent<Attributes>();
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
-	
+
 	// Update is called once per frame
 	void Update() {
+		if (myAttributes.hp <= 0) {
+			occupiedPositions.ForEach(position => gameController.lockedPositions.Remove(position));
+			gameController.allUnits.Remove(gameObject);
+			Destroy(gameObject);
+		}
+
+		// if this unit is attacking
+		if (isAttacking && Time.time > nextFire) {
+			nextFire = Time.time + myAttributes.reloadTime;
+			GameObject newShot = Instantiate(shot, transform.position, transform.rotation);
+			// temporary
+			newShot.transform.localScale = new Vector3(3.0f*myAttributes.reloadTime, 3.0f*myAttributes.reloadTime, 3.0f*myAttributes.reloadTime);
+			newShot.GetComponent<ShotController>().damage = myAttributes.damage;
+			newShot.GetComponent<ShotController>().owner = myAttributes.owner;
+			Vector2 force = new Vector2(attackingTarget.transform.position.x - transform.position.x,
+										attackingTarget.transform.position.y - transform.position.y);
+			force.Normalize();
+			force = new Vector2(force.x * shotMomentum, force.y * shotMomentum);
+			newShot.GetComponent<Rigidbody2D>().AddForce(force);
+		}
 		// if this unit is Selected
 		if (isSelected) {
 			// then we are calculating movement
@@ -43,6 +69,27 @@ public class ShipController : MonoBehaviour {
 	void FixedUpdate () {
 		if (isMoving) {
 			transform.position = Vector2.MoveTowards(transform.position, movePosition, speed * Time.deltaTime);
+		}
+	}
+
+	void OnTriggerStay2D(Collider2D other) {
+		if (other.gameObject.tag.Equals("Shot")) {
+			return;
+		}
+		// box colliders are used for actual ships and circle colliders for range
+		if (other.GetType().ToString() == "UnityEngine.BoxCollider2D" && other.gameObject.GetComponent<Attributes>().owner != myAttributes.owner) {
+			isAttacking = true;
+			attackingTarget = other.gameObject;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other) {
+		if (other.gameObject.tag.Equals("Shot")) {
+			return;
+		}
+		// box colliders are used for actual ships and circle colliders for range
+		if (other.GetType().ToString() == "UnityEngine.BoxCollider2D" && other.gameObject.GetComponent<Attributes>().owner != myAttributes.owner) {
+			isAttacking = false;
 		}
 	}
 
