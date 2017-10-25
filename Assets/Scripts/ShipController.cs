@@ -188,18 +188,20 @@ public class ShipController : MonoBehaviour {
 			}
 		}
 	}
-	// this is garbage but don't have time to make it better atm
-	void ChangeDirection() {
-		if (myAttributes.direction == 0) {
-			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)));
-		} else if (myAttributes.direction == 1) {
-			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 270.0f)));
-		} else if (myAttributes.direction == 2) {
-			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 180.0f)));
-		} else if (myAttributes.direction == 3) {
-			transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 90.0f)));
-		}
-	}
+
+    //gameObject rotation based on the direction object is heading
+    void ChangeDirection() {
+        float rotationAngle = Vector2.Angle(new Vector2(transform.position.x - movePosition.x, transform.position.y - movePosition.y), new Vector2(0, -1));
+
+        if (transform.position.x - movePosition.x < 0) //if moving to the right 
+        {
+            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, - rotationAngle)));
+        }
+        else //other directions
+        {
+            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, rotationAngle)));
+        }
+    }
 
 	bool isEnoughRoom(Vector3 position) {
 		float horizontalSize;
