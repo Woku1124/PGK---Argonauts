@@ -2116,6 +2116,7 @@ GameObject:
   - component: {fileID: 654098630}
   - component: {fileID: 654098629}
   - component: {fileID: 654098634}
+  - component: {fileID: 654098635}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2210,6 +2211,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollingSpeed: 50
   moveCameraSpeed: 2
+--- !u!114 &654098635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 654098628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd59d64726230548b30b5b04929d87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panel: {fileID: 980676857}
 --- !u!1 &663741548
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,10 +3710,10 @@ RectTransform:
   m_Father: {fileID: 1421946564}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 315.7, y: -184}
-  m_SizeDelta: {x: -631.4, y: -368}
+  m_AnchorMin: {x: 0.77174014, y: 0}
+  m_AnchorMax: {x: 1, y: 0.157}
+  m_AnchoredPosition: {x: -25.299988, y: 26}
+  m_SizeDelta: {x: 50.599976, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &980676859
 MonoBehaviour:
@@ -7396,9 +7409,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2053246489}
   - component: {fileID: 2053246490}
-  - component: {fileID: 2053246492}
   - component: {fileID: 2053246491}
   - component: {fileID: 2053246493}
+  - component: {fileID: 2053246492}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Asteroid
@@ -7494,9 +7507,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2053246488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ce87d5e6d85664db726b17f5216ee6, type: 3}
+  m_Script: {fileID: 11500000, guid: 22755b2a85dffdc4aa207cae76b9b791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  r: {fileID: 0}
 --- !u!50 &2053246493
 Rigidbody2D:
   serializedVersion: 4

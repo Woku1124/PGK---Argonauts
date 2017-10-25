@@ -9,6 +9,11 @@ public class PanelScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void HidePanel () {
-        //Panel.gameObject.SetActive(false);
+        Panel.gameObject.SetActive(false);
 	}
+
+    public void ShowPanel()
+    {
+        Panel.gameObject.SetActive(true);
+    }
 }

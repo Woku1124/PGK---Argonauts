@@ -250,6 +250,8 @@ public class GameController : MonoBehaviour {
         GUI.Label(new Rect(5, 5, 100, 20), SS.Ore.ToString("0.##") + " Ore");
         GUI.EndGroup();
 
+        
+
         if (spaceStation.GetComponent<StationController>().isSelected) {
             GUI.BeginGroup(new Rect(InterfaceX, InterfaceY, InterfaceWidth, InterfaceHeight));
 
@@ -275,7 +277,7 @@ public class GameController : MonoBehaviour {
                 }
             }
             if (GUI.Button(new Rect(150, 40, 70, 40), "Dt-30 Ore"))
-            {               
+            {
                 if (SS.Ore >= 30.0f)
                 {
                     unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit2"), new Vector3(1, 0, 0),
