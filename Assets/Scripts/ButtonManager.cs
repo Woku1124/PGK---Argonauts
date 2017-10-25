@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
- 
+    
 
     public void CreateFighter() {
         if (GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().SS.Ore >= 5.0f)

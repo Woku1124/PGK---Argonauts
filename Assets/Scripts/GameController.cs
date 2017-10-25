@@ -7,8 +7,13 @@ public class GameController : MonoBehaviour {
 	public GameObject selectRectanglePrefab;
 	public List<GameObject> allUnits;
 	public List<Vector3> lockedPositions;
+    public GameObject fighter;
+    public GameObject frigate;
+    public GameObject destroyer;
+    public GameObject harvester;
 
-	private bool isSelecting;
+
+    private bool isSelecting;
 	private Vector3 startSelectionMousePosition;
 	private Vector3 endSelectionMousePosition;
 	private Vector3 startSelectRectanglePosition;
@@ -260,7 +265,7 @@ public class GameController : MonoBehaviour {
             {
                 if (SS.Ore >= 5.0f)
                 {
-                    unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit"), new Vector3(1, 0, 0),
+                    unit = GameObject.Instantiate(fighter, new Vector3(1, 0, 0),
                         Quaternion.identity);
                     allUnits.Add(unit);
                     SS.Ore -= 5.0f;
@@ -270,7 +275,7 @@ public class GameController : MonoBehaviour {
             {
                 if (SS.Ore >= 10.0f)
                 {
-                    unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit1"), new Vector3(1, 0, 0),
+                    unit = GameObject.Instantiate(frigate, new Vector3(1, 0, 0),
                         Quaternion.identity);
                     allUnits.Add(unit);
                     SS.Ore -= 10.0f;
@@ -280,7 +285,7 @@ public class GameController : MonoBehaviour {
             {
                 if (SS.Ore >= 30.0f)
                 {
-                    unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit2"), new Vector3(1, 0, 0),
+                    unit = GameObject.Instantiate(destroyer, new Vector3(1, 0, 0),
                         Quaternion.identity);
                     allUnits.Add(unit);
                     SS.Ore -= 30.0f;
@@ -290,7 +295,7 @@ public class GameController : MonoBehaviour {
             {
                 if (SS.Ore >= 1.0f)
                 {
-                    unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit3"), new Vector3(1, 0, 0),
+                    unit = GameObject.Instantiate(harvester, new Vector3(1, 0, 0),
                         Quaternion.identity);
                     allUnits.Add(unit);
                     SS.Ore -= 1.0f;

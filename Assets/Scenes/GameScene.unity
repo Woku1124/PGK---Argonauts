@@ -952,6 +952,10 @@ MonoBehaviour:
     type: 2}
   allUnits: []
   lockedPositions: []
+  fighter: {fileID: 1993865958109142, guid: e4b413cbcbdbf2b4fb82f43a65220b6e, type: 2}
+  frigate: {fileID: 1883724120664286, guid: 84f7672404c8432409880edf90d6e4f7, type: 2}
+  destroyer: {fileID: 1596229721972482, guid: b17f276096d7f5a43846be87917003e0, type: 2}
+  harvester: {fileID: 1197970021638212, guid: 039419609f23ebb41ad808f059a2d83f, type: 2}
   unit: {fileID: 0}
   SS: {fileID: 610662003}
   enemyUnits: []
@@ -4739,7 +4743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1421946561
 MonoBehaviour:
   m_ObjectHideFlags: 0
