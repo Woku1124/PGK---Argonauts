@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour {
 	private Vector3 endSelectRectanglePosition;
 	private GameObject selectRectangle;
 	private GameObject spaceStation;
-    private GameObject unit;
+    public GameObject unit;
 
     public StationController SS;
 
@@ -32,8 +32,13 @@ public class GameController : MonoBehaviour {
     void Start () {
 
 		isSelecting = false;
+        InterfaceX=300;
+        InterfaceY= 300;
+        InterfaceWidth=400;
+        InterfaceHeight=100;
 
-		allUnits = new List<GameObject>();
+
+    allUnits = new List<GameObject>();
 		enemyUnits = new List<GameObject>();
 
 		lockedPositions = new List<Vector3>();
@@ -238,8 +243,15 @@ public class GameController : MonoBehaviour {
 
     void OnGUI()
     {
-    	if (spaceStation.GetComponent<StationController>().isSelected) {
-            GUI.BeginGroup(new Rect(300, 300, 400, 100));
+        //showing sources in the left corner
+        GUI.BeginGroup(new Rect(0, 0, 110, 30));
+
+        GUI.Box(new Rect(0, 0, 110, 30), "");
+        GUI.Label(new Rect(5, 5, 100, 20), SS.Ore.ToString("0.##") + " Ore");
+        GUI.EndGroup();
+
+        if (spaceStation.GetComponent<StationController>().isSelected) {
+            GUI.BeginGroup(new Rect(InterfaceX, InterfaceY, InterfaceWidth, InterfaceHeight));
 
             GUI.Box(new Rect(0, 0, 400, 100), "Space Station");
             if (GUI.Button(new Rect(10, 40, 70, 40), "Fr-5 Ore"))
