@@ -10,6 +10,9 @@ TagManager:
   - Unit2
   - Enemy
   - EnemyStation
+  - Shot
+  - Asteroid
+  - Unit3
   layers:
   - Default
   - TransparentFX
@@ -52,6 +55,9 @@ TagManager:
     locked: 0
   - name: Units
     uniqueID: 723301973
+    locked: 0
+  - name: Shots
+    uniqueID: 260935855
     locked: 0
   - name: SelectRectangle
     uniqueID: 4207608201
