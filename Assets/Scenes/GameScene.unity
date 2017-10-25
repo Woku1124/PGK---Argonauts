@@ -6331,21 +6331,13 @@ Transform:
   m_Father: {fileID: 62033081}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2053246490
-MonoBehaviour:
+--- !u!212 &2053246490
+SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2053246488}
   m_Enabled: 1
-<<<<<<< HEAD
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8543990efdf0f98499fea4e5999dd6b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pos: {x: 20, y: 20}
-  asteroid: {fileID: 1384693600268860, guid: b3d1b600ce11c7740b09a2b93a8b2297, type: 2}
-=======
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_MotionVectors: 1
@@ -6437,7 +6429,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
->>>>>>> 5e27f67fff9dff26ef9cdd5e313b28da25433a4c
 --- !u!1 &2058006032
 GameObject:
   m_ObjectHideFlags: 0
