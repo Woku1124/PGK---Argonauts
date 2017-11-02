@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PiratesFighterController : MonoBehaviour {
-	
-	public GameObject shot;
+
 	public float speed;
+	public GameObject shot;
+	[HideInInspector]
 	public List<Vector3> occupiedPositions;
 
 	private bool isAttacking;
 	private float nextFire;
+	private float shotMomentum = 2000.0f;
 	private Attributes myAttributes;
 	private GameController gameController;
 	private GameObject attackingTarget;
-	private float shotMomentum = 2000.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -48,7 +49,8 @@ public class PiratesFighterController : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
-		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Unit3") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
+		// TODO ten if jest za duzy, do przerobienia
+		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
 			return;
 		}
 		// box colliders are used for actual ships and circle colliders for range
@@ -59,7 +61,8 @@ public class PiratesFighterController : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Unit3") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
+		// TODO ten if jest za duzy, do przerobienia
+		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
 			return;
 		}
 		// box colliders are used for actual ships and circle colliders for range

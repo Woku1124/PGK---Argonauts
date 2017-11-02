@@ -5,8 +5,9 @@ using UnityEngine;
 public class StationController : MonoBehaviour {
 
 	public bool isSelected;
+	public float Ore;
+
 	private Attributes myAttributes;
-    public float Ore;
 
 	// Use this for initialization
 	void Start () {

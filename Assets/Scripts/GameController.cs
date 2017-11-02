@@ -5,45 +5,41 @@ using UnityEngine;
 public class GameController : MonoBehaviour {
 
 	public GameObject selectRectanglePrefab;
+    public GameObject fighterPrefab;
+	public GameObject frigatePrefab;
+	public GameObject destroyerPrefab;
+	public GameObject harvesterPrefab;
+	[HideInInspector]
 	public List<GameObject> allUnits;
+	[HideInInspector]
 	public List<Vector3> lockedPositions;
-    public GameObject fighter;
-    public GameObject frigate;
-    public GameObject destroyer;
-    public GameObject harvester;
-
+	[HideInInspector]
+	public List<GameObject> enemyUnits;
 
     private bool isSelecting;
+	private float InterfaceX;
+	private float InterfaceY;
+	private float InterfaceWidth;
+	private float InterfaceHeight;
+
 	private Vector3 startSelectionMousePosition;
 	private Vector3 endSelectionMousePosition;
 	private Vector3 startSelectRectanglePosition;
 	private Vector3 endSelectRectanglePosition;
 	private GameObject selectRectangle;
 	private GameObject spaceStation;
-    public GameObject unit;
-
-    public StationController SS;
-
-	public List<GameObject> enemyUnits;
 	private GameObject piratesStation;
-
-    private float InterfaceX;
-    private float InterfaceY;
-    private float InterfaceWidth;
-    private float InterfaceHeight;
-
+    private StationController spaceStationController;
 
     // Use this for initialization
     void Start () {
-
 		isSelecting = false;
-        InterfaceX=300;
-        InterfaceY= 300;
-        InterfaceWidth=400;
-        InterfaceHeight=100;
+        InterfaceX = 300.0f;
+		InterfaceY = 300.0f;
+		InterfaceWidth = 400.0f;
+		InterfaceHeight = 100.0f;
 
-
-    allUnits = new List<GameObject>();
+    	allUnits = new List<GameObject>();
 		enemyUnits = new List<GameObject>();
 
 		lockedPositions = new List<Vector3>();
@@ -56,6 +52,8 @@ public class GameController : MonoBehaviour {
 		enemyUnits.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
 		spaceStation = GameObject.FindGameObjectWithTag("SpaceStation");
 		piratesStation = GameObject.FindGameObjectWithTag("EnemyStation");
+
+		spaceStationController = spaceStation.GetComponent<StationController>();
 
 		// lock units positions
 		allUnits.ForEach(unit => { 
@@ -252,57 +250,47 @@ public class GameController : MonoBehaviour {
         GUI.BeginGroup(new Rect(0, 0, 110, 30));
 
         GUI.Box(new Rect(0, 0, 110, 30), "");
-        GUI.Label(new Rect(5, 5, 100, 20), SS.Ore.ToString("0.##") + " Ore");
+		GUI.Label(new Rect(5, 5, 100, 20), spaceStationController.Ore.ToString("0.##") + " Ore");
         GUI.EndGroup();
 
-        
-
-        if (spaceStation.GetComponent<StationController>().isSelected) {
+		if (spaceStationController.isSelected) {
             GUI.BeginGroup(new Rect(InterfaceX, InterfaceY, InterfaceWidth, InterfaceHeight));
 
             GUI.Box(new Rect(0, 0, 400, 100), "Space Station");
             if (GUI.Button(new Rect(10, 40, 70, 40), "Fr-5 Ore"))
             {
-                if (SS.Ore >= 5.0f)
+				if (spaceStationController.Ore >= 5.0f)
                 {
-                    unit = GameObject.Instantiate(fighter, new Vector3(1, 0, 0),
-                        Quaternion.identity);
-                    allUnits.Add(unit);
-                    SS.Ore -= 5.0f;
+					allUnits.Add(GameObject.Instantiate(fighterPrefab, new Vector3(1, 0, 0), Quaternion.identity));
+					spaceStationController.Ore -= 5.0f;
                 }
             }
             if (GUI.Button(new Rect(80, 40, 70, 40), "Ft-10 Ore"))
             {
-                if (SS.Ore >= 10.0f)
+				if (spaceStationController.Ore >= 10.0f)
                 {
-                    unit = GameObject.Instantiate(frigate, new Vector3(1, 0, 0),
-                        Quaternion.identity);
-                    allUnits.Add(unit);
-                    SS.Ore -= 10.0f;
+					allUnits.Add(GameObject.Instantiate(frigatePrefab, new Vector3(1, 0, 0), Quaternion.identity));
+					spaceStationController.Ore -= 10.0f;
                 }
             }
             if (GUI.Button(new Rect(150, 40, 70, 40), "Dt-30 Ore"))
             {
-                if (SS.Ore >= 30.0f)
+				if (spaceStationController.Ore >= 30.0f)
                 {
-                    unit = GameObject.Instantiate(destroyer, new Vector3(1, 0, 0),
-                        Quaternion.identity);
-                    allUnits.Add(unit);
-                    SS.Ore -= 30.0f;
+					allUnits.Add(GameObject.Instantiate(destroyerPrefab, new Vector3(1, 0, 0), Quaternion.identity));
+					spaceStationController.Ore -= 30.0f;
                 }
             }
             if (GUI.Button(new Rect(220, 40, 70, 40), "Hv-1 Ore"))
             {
-                if (SS.Ore >= 1.0f)
+				if (spaceStationController.Ore >= 1.0f)
                 {
-                    unit = GameObject.Instantiate(harvester, new Vector3(1, 0, 0),
-                        Quaternion.identity);
-                    allUnits.Add(unit);
-                    SS.Ore -= 1.0f;
+					allUnits.Add(GameObject.Instantiate(harvesterPrefab, new Vector3(1, 0, 0), Quaternion.identity));
+					spaceStationController.Ore -= 1.0f;
                 }
             }
 
-            GUI.Label(new Rect(300, 40, 50, 40), SS.Ore.ToString("0.##") + " Ore");
+			GUI.Label(new Rect(300, 40, 50, 40), spaceStationController.Ore.ToString("0.##") + " Ore");
 
             GUI.EndGroup();
         }

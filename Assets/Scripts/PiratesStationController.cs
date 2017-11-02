@@ -5,6 +5,7 @@ using UnityEngine;
 public class PiratesStationController : MonoBehaviour {
 	
 	public bool isSelected;
+
 	private Attributes myAttributes;
 
 	// Use this for initialization

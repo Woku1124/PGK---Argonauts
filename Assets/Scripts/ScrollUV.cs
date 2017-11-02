@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class ScrollUV : MonoBehaviour
 {
+    public float speed = 300.0f;
 
-    public float speed = 300f;
-
-	void Update ()
-	{
-
+	void Update () {
 	    UnityEngine.MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 	    Material mat = meshRenderer.sharedMaterial;
 

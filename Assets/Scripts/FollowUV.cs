@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class FollowUV : MonoBehaviour
 {
-
     public float parralax = 20f;
 
-	void Update ()
-	{
-
+	void Update () {
 	    UnityEngine.MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 	    Material mat = meshRenderer.sharedMaterial;
 

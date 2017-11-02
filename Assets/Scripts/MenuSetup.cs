@@ -11,8 +11,7 @@ public class MenuSetup : MonoBehaviour {
 
     public Texture2D IconContainer;
 
-    void OnGUI()
-    {
+	void OnGUI() {
         GUIStyle Container = new GUIStyle();
         Container.normal.background = IconContainer;
         GUI.Box(new Rect(Screen.width / 2 - 200, Screen.height - 40, 400, 50),"",Container);

@@ -7,8 +7,6 @@ public class AsteroidController : MonoBehaviour {
 	public float speed;
 	public Rigidbody2D r;
 
-
-
 	// Use this for initialization
 	void Start () {
 		
@@ -22,7 +20,6 @@ public class AsteroidController : MonoBehaviour {
 
 	}
 	void FixedUpdate () {
-
 		transform.Translate (transform.up * speed * Time.deltaTime);
 
         transform.Rotate(Vector3.forward * 5f * Time.deltaTime, Space.Self);

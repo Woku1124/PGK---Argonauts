@@ -6,10 +6,11 @@ public class ShipController : MonoBehaviour {
 
 	public float speed;
 	public bool isSelected;
-
-	public List<Vector3> occupiedPositions;
 	public GameObject shot;
+	[HideInInspector]
+	public List<Vector3> occupiedPositions;
 
+	private float shotMomentum = 2000.0f;
 	private bool isMoving;
 	private bool isAttacking;
 	private float nextFire;
@@ -17,7 +18,6 @@ public class ShipController : MonoBehaviour {
 	private GameController gameController;
 	private GameObject attackingTarget;
 	private Attributes myAttributes;
-	private float shotMomentum = 2000.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -73,7 +73,8 @@ public class ShipController : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
-		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Unit3") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
+		// TODO ten if jest za duzy, do przerobienia
+		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
 			return;
 		}
 		// box colliders are used for actual ships and circle colliders for range
@@ -84,7 +85,8 @@ public class ShipController : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Unit3") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
+		// TODO ten if jest za duzy, do przerobienia
+		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
 			return;
 		}
 		// box colliders are used for actual ships and circle colliders for range

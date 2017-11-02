@@ -12,8 +12,7 @@ public class PanelScript : MonoBehaviour {
         Panel.gameObject.SetActive(false);
 	}
 
-    public void ShowPanel()
-    {
+    public void ShowPanel() {
         Panel.gameObject.SetActive(true);
     }
 }

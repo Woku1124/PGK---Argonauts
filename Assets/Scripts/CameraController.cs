@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour {
 
 	public float scrollingSpeed;
 	public float moveCameraSpeed;
+
 	private int theScreenWidth;
 	private int theScreenHeight;
 	private Camera cam;

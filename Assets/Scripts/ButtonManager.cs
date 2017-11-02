@@ -4,36 +4,44 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    
+	public GameObject fighterPrefab;
+	public GameObject frigatePrefab;
+	public GameObject destroyerPrefab;
+	public GameObject harvesterPrefab;
 
+	private GameController gameController;
+	private StationController spaceStationController;
+
+	void Start () {
+		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		spaceStationController = GameObject.FindGameObjectWithTag("SpaceStation").GetComponent<StationController>();
+	}
+		
     public void CreateFighter() {
-        if (GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().SS.Ore >= 5.0f)
-        {
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().allUnits.Add(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit"), new Vector3(1, 0, 0), Quaternion.identity));
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().SS.Ore -= 5.0f;
+		if (spaceStationController.Ore >= 5.0f) {
+			gameController.allUnits.Add(GameObject.Instantiate(fighterPrefab, new Vector3(1, 0, 0), Quaternion.identity));
+			spaceStationController.Ore -= 5.0f;
         }
     }
 
     public void CreateFrigate() {
-        if (GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().SS.Ore >= 10.0f)
-        {
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().allUnits.Add(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit1"), new Vector3(1, 0, 0), Quaternion.identity));
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().SS.Ore -= 10.0f;
-        }
+		if (spaceStationController.Ore >= 10.0f) {
+			gameController.allUnits.Add(GameObject.Instantiate(frigatePrefab, new Vector3(1, 0, 0), Quaternion.identity));
+			spaceStationController.Ore -= 10.0f;
+		}
     }
 
     public void CreateDestroyer() {
-        if (GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().SS.Ore >= 30.0f) {
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().allUnits.Add(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit2"), new Vector3(1, 0, 0), Quaternion.identity));
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().SS.Ore -= 30.0f;
-        }
+		if (spaceStationController.Ore >= 30.0f){
+			gameController.allUnits.Add(GameObject.Instantiate(destroyerPrefab, new Vector3(1, 0, 0), Quaternion.identity));
+			spaceStationController.Ore -= 30.0f;
+		}
     }
 
-    public void CreateHarvester()
-    {
-        if (GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().SS.Ore >= 1.0f) {
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().allUnits.Add(GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().unit = GameObject.Instantiate(GameObject.FindGameObjectWithTag("Unit3"), new Vector3(1, 0, 0), Quaternion.identity));
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().SS.Ore -= 1.0f;
-        }
-    }
+    public void CreateHarvester() {
+		if (spaceStationController.Ore >= 3.0f) {
+			gameController.allUnits.Add(GameObject.Instantiate(harvesterPrefab, new Vector3(1, 0, 0), Quaternion.identity));
+			spaceStationController.Ore -= 3.0f;
+		}
+	}
 }

@@ -6,34 +6,30 @@ public class HarvesterController : MonoBehaviour
 {
     public float maxCapacity = 100.0f;
     public float resource;
-    public StationController station;
+
+    private StationController spaceSpationController;
 
 	// Use this for initialization
 	void Start () {
-		
+		spaceSpationController = GameObject.FindGameObjectWithTag("SpaceStation").GetComponent<StationController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-
-
-    void AddResource()
-    {
+		
+    void AddResource() {
         resource += 0.01f;
     }
 
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Asteroid"))
-        {    
+    void OnTriggerStay2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Asteroid")) {    
             AddResource();
         }
 
-        if (other.gameObject.CompareTag("SpaceStation"))
-        {
-            station.Ore += resource;
+        if (other.gameObject.CompareTag("SpaceStation")) {
+			spaceSpationController.Ore += resource;
             resource = 0.0f;
         }
     }
