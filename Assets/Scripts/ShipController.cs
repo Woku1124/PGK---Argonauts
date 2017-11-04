@@ -17,7 +17,8 @@ public class ShipController : MonoBehaviour {
 	private Vector3 movePosition;
 	private GameController gameController;
 	private GameObject attackingTarget;
-	private Attributes myAttributes;
+    private GameObject prioritizedAttackingTarget = null;
+    private Attributes myAttributes;
 
 	// Use this for initialization
 	void Start () {
@@ -55,9 +56,18 @@ public class ShipController : MonoBehaviour {
 		}
 		// if this unit is Selected
 		if (isSelected) {
-			// then we are calculating movement
-			CalculateMovement();
-		}
+            GameObject enemyClicked = ClickedOnEnemy();
+            // then if clicked on enemy 
+            if (enemyClicked != null)
+            {
+                // then prioritize this enemy
+                prioritizedAttackingTarget = enemyClicked;
+            }else
+            {
+                // else we are calculating movement
+                CalculateMovement();
+            }
+        }
 
 		// if we are moving and our position is the same as our destination
 		if (isMoving && movePosition.Equals(transform.position)) {
@@ -80,7 +90,26 @@ public class ShipController : MonoBehaviour {
 		// box colliders are used for actual ships and circle colliders for range
 		if (other.GetType().ToString() == "UnityEngine.BoxCollider2D" && other.gameObject.GetComponent<Attributes>().owner != myAttributes.owner) {
 			isAttacking = true;
-			attackingTarget = other.gameObject;
+            // if noone is being attacked by this ship
+            if (attackingTarget == null)
+            {
+                // then attack the closest enemy
+                attackingTarget = other.gameObject;
+            }
+            // otherwise check if the prioritized target is in range
+            else if (other.gameObject == prioritizedAttackingTarget)//TODO: TUTAJ wrzucic sprawdzanie czy przeciwnik na ktorym skupiamy atak jest w zasiegu
+            {
+                // ATAC!
+                attackingTarget = prioritizedAttackingTarget;
+
+            }
+            // else the prioritized enemy is not in range
+            else
+            {
+                // Attack someone else
+                attackingTarget = other.gameObject;
+            }
+			
 		}
 	}
 
@@ -242,4 +271,39 @@ public class ShipController : MonoBehaviour {
 			}
 		}
 	}
+    GameObject ClickedOnEnemy()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+
+            // calculationg mouse position in world
+            Vector3 mousePosition3D = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // rounding because we want to end in grid
+            Vector2 mousePosition2D = new Vector2(Mathf.Round(mousePosition3D.x), Mathf.Round(mousePosition3D.y));
+            RaycastHit2D[] hits = new RaycastHit2D[5];
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.useTriggers = true;
+            Physics2D.Raycast(mousePosition2D, Vector2.zero, filter, hits);
+            foreach(var hit in hits)
+            {
+                if (hit.collider != null)
+                {
+                    if (hit.collider.gameObject.tag.Equals("Shot") || hit.collider.gameObject.tag.Equals("Asteroid") || hit.collider.gameObject.tag.Equals("Unit3"))
+                    {
+                        continue;
+                    }
+                    if (hit.collider.GetType().ToString() == "UnityEngine.BoxCollider2D" && hit.collider.gameObject.GetComponent<Attributes>().owner != myAttributes.owner)
+                    {
+                        Debug.Log(hit.collider.gameObject.name);// TODO: WYWALIC
+                        Debug.Log(hit.collider.GetType().ToString());// TODO: WYWALIC
+                        return hit.collider.gameObject;
+                    }
+                }else
+                {
+                    return null;
+                }
+            }
+        }
+        return null;
+    }
 }

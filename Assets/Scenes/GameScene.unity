@@ -1040,9 +1040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dfca96b2f8f96047a411f0311e8e57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allUnits: []
-  lockedPositions: []
-  enemyUnits: []
   selectRectanglePrefab: {fileID: 1750285808482956, guid: 618358b70cb935049ba6b6b237bb94e0,
     type: 2}
   fighterPrefab: {fileID: 1993865958109142, guid: e4b413cbcbdbf2b4fb82f43a65220b6e,
@@ -1053,6 +1050,9 @@ MonoBehaviour:
     type: 2}
   harvesterPrefab: {fileID: 1197970021638212, guid: 039419609f23ebb41ad808f059a2d83f,
     type: 2}
+  allUnits: []
+  lockedPositions: []
+  enemyUnits: []
 --- !u!4 &322064150
 Transform:
   m_ObjectHideFlags: 0
@@ -2530,6 +2530,11 @@ Prefab:
     - target: {fileID: 1883724120664286, guid: 84f7672404c8432409880edf90d6e4f7, type: 2}
       propertyPath: m_TagString
       value: Unit1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563312728070382, guid: 84f7672404c8432409880edf90d6e4f7,
+        type: 2}
+      propertyPath: hp
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84f7672404c8432409880edf90d6e4f7, type: 2}
