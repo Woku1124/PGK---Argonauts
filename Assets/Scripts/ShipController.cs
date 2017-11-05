@@ -96,14 +96,14 @@ public class ShipController : MonoBehaviour {
                 // then attack the closest enemy
                 attackingTarget = other.gameObject;
             }
-            // otherwise check if the prioritized target is in range
-            else if (other.gameObject == prioritizedAttackingTarget)//TODO: TUTAJ wrzucic sprawdzanie czy przeciwnik na ktorym skupiamy atak jest w zasiegu
+            // otherwise check if the prioritized target is set and in range
+            else if (prioritizedAttackingTarget && isTargetInFireRange(prioritizedAttackingTarget))
             {
                 // ATAC!
                 attackingTarget = prioritizedAttackingTarget;
 
             }
-            // else the prioritized enemy is not in range
+            // else the prioritized enemy does not exist or is not in range
             else
             {
                 // Attack someone else
@@ -271,6 +271,7 @@ public class ShipController : MonoBehaviour {
 			}
 		}
 	}
+
     GameObject ClickedOnEnemy()
     {
         if (Input.GetMouseButtonDown(1))
@@ -294,8 +295,6 @@ public class ShipController : MonoBehaviour {
                     }
                     if (hit.collider.GetType().ToString() == "UnityEngine.BoxCollider2D" && hit.collider.gameObject.GetComponent<Attributes>().owner != myAttributes.owner)
                     {
-                        Debug.Log(hit.collider.gameObject.name);// TODO: WYWALIC
-                        Debug.Log(hit.collider.GetType().ToString());// TODO: WYWALIC
                         return hit.collider.gameObject;
                     }
                 }else
@@ -305,5 +304,20 @@ public class ShipController : MonoBehaviour {
             }
         }
         return null;
+    }
+
+    bool isTargetInFireRange(GameObject target)
+    {
+        // amount of detected objects is restricted and HARDCODED to 10
+        Collider2D[] hitColliders = new Collider2D[10];
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.useTriggers = true;
+
+        Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y), GetComponent<CircleCollider2D>().radius,filter,hitColliders);
+        foreach(var collider in hitColliders)
+        {
+            if(collider.gameObject == target){ return true; }
+        }
+        return false;
     }
 }
