@@ -10,6 +10,7 @@ public class PiratesFighterController : MonoBehaviour {
 	public List<Vector3> occupiedPositions;
 
 	private bool isAttacking;
+	private bool isAttackingStation;
 	private float nextFire;
 	private float shotMomentum = 2000.0f;
 	private Attributes myAttributes;
@@ -19,12 +20,13 @@ public class PiratesFighterController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isAttacking = false;
+		isAttackingStation = false;
 		occupiedPositions = new List<Vector3>();
 		myAttributes = GetComponent<Attributes>();
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		CalculateOccupiedPositions(transform.position);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (myAttributes.hp <= 0) {
@@ -53,10 +55,21 @@ public class PiratesFighterController : MonoBehaviour {
 		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
 			return;
 		}
+
 		// box colliders are used for actual ships and circle colliders for range
 		if (other.GetType().ToString() == "UnityEngine.BoxCollider2D" && other.gameObject.GetComponent<Attributes>().owner != myAttributes.owner) {
-			isAttacking = true;
-			attackingTarget = other.gameObject;
+			if (isAttacking == false) {
+				isAttacking = true;
+				isAttackingStation = other.gameObject.CompareTag("SpaceStation");
+				attackingTarget = other.gameObject;
+				return;
+			}
+
+			if (isAttackingStation == true && other.gameObject.CompareTag("SpaceStation") == false) {
+				isAttacking = true;
+				isAttackingStation = false;
+				attackingTarget = other.gameObject;
+			}
 		}
 	}
 
@@ -68,6 +81,7 @@ public class PiratesFighterController : MonoBehaviour {
 		// box colliders are used for actual ships and circle colliders for range
 		if (other.GetType().ToString() == "UnityEngine.BoxCollider2D" && other.gameObject.GetComponent<Attributes>().owner != myAttributes.owner) {
 			isAttacking = false;
+			isAttackingStation = false;
 		}
 	}
 
