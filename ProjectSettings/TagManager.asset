@@ -13,6 +13,7 @@ TagManager:
   - Shot
   - Asteroid
   - Unit3
+  - AIController
   layers:
   - Default
   - TransparentFX

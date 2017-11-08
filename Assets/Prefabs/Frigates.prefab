@@ -199,8 +199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   isSelected: 0
-  occupiedPositions: []
   shot: {fileID: 1689273870899288, guid: b2a59d0f9becde043879c8dfb9d0e1c1, type: 2}
+  occupiedPositions: []
 --- !u!114 &114563312728070382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,6 +219,7 @@ MonoBehaviour:
   hp: 100
   damage: 20
   reloadTime: 1
+  battleValue: 2
 --- !u!212 &212524404588399052
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -16,6 +16,7 @@ public class ShipController : MonoBehaviour {
 	private float nextFire;
 	private Vector3 movePosition;
 	private GameController gameController;
+	private AIController aiController;
 	private GameObject attackingTarget;
     private GameObject prioritizedAttackingTarget = null;
     private Attributes myAttributes;
@@ -30,6 +31,8 @@ public class ShipController : MonoBehaviour {
 		CalculateOccupiedPositions(transform.position);
 		myAttributes = GetComponent<Attributes>();
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		aiController = GameObject.FindGameObjectWithTag("AIController").GetComponent<AIController>();
+		aiController.IncreasePlayerBattleValue(myAttributes.battleValue);
 	}
 
 	// Update is called once per frame
@@ -122,6 +125,10 @@ public class ShipController : MonoBehaviour {
 		if (other.GetType().ToString() == "UnityEngine.BoxCollider2D" && other.gameObject.GetComponent<Attributes>().owner != myAttributes.owner) {
 			isAttacking = false;
 		}
+	}
+
+	void OnDestroy() {
+		aiController.DecreasePlayerBattleValue(myAttributes.battleValue);
 	}
 
 	void CalculateMovement() {

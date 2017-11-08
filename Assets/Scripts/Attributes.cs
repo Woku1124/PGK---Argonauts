@@ -13,4 +13,6 @@ public class Attributes: MonoBehaviour {
 	public int hp;
 	public int damage;
 	public float reloadTime;
+
+	public int battleValue;
 }

@@ -168,9 +168,11 @@ public class GameController : MonoBehaviour {
 	}
 
 	void DeselectSpaceStation() {
-		spaceStation.GetComponent<StationController>().isSelected = false;
-		// temporary
-		spaceStation.GetComponent<SpriteRenderer>().color = Color.grey;
+		if (spaceStation) {
+			spaceStation.GetComponent<StationController>().isSelected = false;
+			// temporary
+			spaceStation.GetComponent<SpriteRenderer>().color = Color.grey;
+		}
 	}
 
 	void CalculateSelectRectangle() {
@@ -186,6 +188,9 @@ public class GameController : MonoBehaviour {
 	}
 
 	bool IsInSelectRectangle(GameObject obj) {
+		if (obj == null) {
+			return false;
+		}
 		int objDirection = obj.GetComponent<Attributes>().direction;
 		float objSizeX;
 		float objSizeY;

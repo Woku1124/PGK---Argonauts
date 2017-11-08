@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 82331716479178482}
   m_Layer: 0
   m_Name: Destroyer
-  m_TagString: Unit
+  m_TagString: Unit2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,8 +199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   isSelected: 0
-  occupiedPositions: []
   shot: {fileID: 1689273870899288, guid: b2a59d0f9becde043879c8dfb9d0e1c1, type: 2}
+  occupiedPositions: []
 --- !u!114 &114368277648381726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -219,6 +219,7 @@ MonoBehaviour:
   hp: 400
   damage: 100
   reloadTime: 3
+  battleValue: 8
 --- !u!212 &212009820011597958
 SpriteRenderer:
   m_ObjectHideFlags: 1
