@@ -14,6 +14,9 @@ TagManager:
   - Asteroid
   - Unit3
   - AIController
+  - Eunit1
+  - Eunit2
+  - Eunit3
   layers:
   - Default
   - TransparentFX

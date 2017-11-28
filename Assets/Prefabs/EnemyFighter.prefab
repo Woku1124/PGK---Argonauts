@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114262040070013524}
   m_Layer: 0
   m_Name: EnemyFighter
-  m_TagString: Unit
+  m_TagString: Eunit2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

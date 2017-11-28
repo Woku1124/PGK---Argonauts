@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour {
 
 	void Start() {
 		cam = GetComponent<Camera>();
+
 		theScreenWidth = Screen.width;
 		theScreenHeight = Screen.height;
 	}
