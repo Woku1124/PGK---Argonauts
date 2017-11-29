@@ -11,6 +11,8 @@ public class ShipController : MonoBehaviour {
     public float startHealthBarLength;
     [HideInInspector]
 	public List<Vector3> occupiedPositions;
+    [HideInInspector]
+    public bool isAlive;
 
 	private float shotMomentum = 2000.0f;
 	private bool isMoving;
@@ -20,13 +22,14 @@ public class ShipController : MonoBehaviour {
 	private GameController gameController;
 	private AIController aiController;
 	private GameObject attackingTarget;
-    private GameObject prioritizedAttackingTarget = null;
+    private GameObject prioritizedAttackingTarget;
     private Attributes myAttributes;
-
+    private List<GameObject> shipsInRange;
 
     // Use this for initialization
     void Start () {
-		isMoving = false;
+        isAlive = true;
+        isMoving = false;
 		isAttacking = false;
 		isSelected = false;
         movePosition = new Vector3();
@@ -36,7 +39,9 @@ public class ShipController : MonoBehaviour {
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		aiController = GameObject.FindGameObjectWithTag("AIController").GetComponent<AIController>();
 		aiController.IncreasePlayerBattleValue(myAttributes.battleValue);
-	}
+        prioritizedAttackingTarget = null;
+        shipsInRange = new List<GameObject>();
+    }
 
 	// Update is called once per frame
 	void Update() {
@@ -89,13 +94,16 @@ public class ShipController : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D other) {
-		// TODO ten if jest za duzy, do przerobienia
-		if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
+        // TODO ten if jest za duzy, do przerobienia
+        if (other.gameObject.tag.Equals("Shot") || other.gameObject.tag.Equals("Asteroid") || gameObject.tag.Equals("Unit3")) {
 			return;
 		}
-		// box colliders are used for actual ships and circle colliders for range
-		if (other.GetType().ToString() == "UnityEngine.BoxCollider2D" && other.gameObject.GetComponent<Attributes>().owner != myAttributes.owner) {
+        // box colliders are used for actual ships and circle colliders for range
+        if (other.GetType().ToString() == "UnityEngine.BoxCollider2D" && other.gameObject.GetComponent<Attributes>().owner != myAttributes.owner) {
 			isAttacking = true;
+            if (!shipsInRange.Contains(other.gameObject)){
+                shipsInRange.Add(other.gameObject);
+            }
             // if noone is being attacked by this ship
             if (attackingTarget == null)
             {
@@ -127,11 +135,13 @@ public class ShipController : MonoBehaviour {
 		// box colliders are used for actual ships and circle colliders for range
 		if (other.GetType().ToString() == "UnityEngine.BoxCollider2D" && other.gameObject.GetComponent<Attributes>().owner != myAttributes.owner) {
 			isAttacking = false;
-		}
+            shipsInRange.Remove(other.gameObject);
+        }
 	}
 
 	void OnDestroy() {
-		aiController.DecreasePlayerBattleValue(myAttributes.battleValue);
+        isAlive = false;
+        aiController.DecreasePlayerBattleValue(myAttributes.battleValue);
 	}
 
 	void CalculateMovement() {
@@ -317,7 +327,7 @@ public class ShipController : MonoBehaviour {
     }
 
     bool isTargetInFireRange(GameObject target)
-    {
+    {/*
         // amount of detected objects is restricted and HARDCODED to 10
         Collider2D[] hitColliders = new Collider2D[10];
         ContactFilter2D filter = new ContactFilter2D();
@@ -330,6 +340,12 @@ public class ShipController : MonoBehaviour {
 				return false;
 			}
             if(collider.gameObject == target){ return true; }
+        }
+        return false;
+        */
+        foreach(var ship in shipsInRange)
+        {
+            if (ship == target) return true;
         }
         return false;
     }
