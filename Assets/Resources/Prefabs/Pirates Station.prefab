@@ -185,9 +185,11 @@ MonoBehaviour:
   SizeY: 4
   direction: 0
   owner: 1
+  maxhp: 1000
   hp: 1000
   damage: 0
   reloadTime: 0
+  battleValue: 0
 --- !u!114 &114500085419026492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,6 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 1
+  isUnderAttack: 0
+  Ore: 0
 --- !u!212 &212128273178283384
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -7,7 +7,9 @@ public class ShipController : MonoBehaviour {
 	public float speed;
 	public bool isSelected;
 	public GameObject shot;
-	[HideInInspector]
+    public float startHP;
+    public float startHealthBarLength;
+    [HideInInspector]
 	public List<Vector3> occupiedPositions;
 
 	private float shotMomentum = 2000.0f;
@@ -21,12 +23,13 @@ public class ShipController : MonoBehaviour {
     private GameObject prioritizedAttackingTarget = null;
     private Attributes myAttributes;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 		isMoving = false;
 		isAttacking = false;
 		isSelected = false;
-		movePosition = new Vector3();
+        movePosition = new Vector3();
 		occupiedPositions = new List<Vector3>();
 		CalculateOccupiedPositions(transform.position);
 		myAttributes = GetComponent<Attributes>();
@@ -327,4 +330,29 @@ public class ShipController : MonoBehaviour {
         }
         return false;
     }
+
+    //public float hSliderValue;
+    void OnGUI()
+    {
+        if (isSelected)
+        if (myAttributes.hp > 0)
+        {
+            Color background = Color.blue;
+            background.a = 1f;
+            DrawQuad(new Rect(Screen.width-300, Screen.height-150, 200*myAttributes.hp/myAttributes.maxhp, 20), background);
+            GUI.Label(new Rect(Screen.width - 300, Screen.height - 180, 200, 20), " "+name);
+            GUI.Label(new Rect(Screen.width - 300, Screen.height - 150, 200, 20)," HP: " + myAttributes.hp + "/" + myAttributes.maxhp);
+        }
+            
+    }
+
+    void DrawQuad(Rect position, Color color)
+    {
+        Texture2D texture = new Texture2D(1, 1);
+        texture.SetPixel(0, 0, color);
+        texture.Apply();
+        GUI.skin.box.normal.background = texture;
+        GUI.Box(position, GUIContent.none);
+    }
+
 }

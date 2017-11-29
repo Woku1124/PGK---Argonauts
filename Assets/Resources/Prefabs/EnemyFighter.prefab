@@ -201,6 +201,8 @@ MonoBehaviour:
   SizeY: 1
   direction: 0
   owner: 1
+  name: Enemy Fighter
+  maxhp: 40
   hp: 40
   damage: 4
   reloadTime: 0.5

@@ -217,6 +217,8 @@ MonoBehaviour:
   SizeY: 6
   direction: 0
   owner: 1
+  name: Enemy Destroyer
+  maxhp: 400
   hp: 400
   damage: 100
   reloadTime: 3

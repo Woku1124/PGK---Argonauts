@@ -10,7 +10,9 @@ public class Attributes: MonoBehaviour {
 	public int direction; // 0 - up, 1 - right, 2 - down, 3 - left
 
 	public int owner; // 0 - player, others - enemies
-	public int hp;
+    public string name;
+    public int maxhp;
+    public int hp;
 	public int damage;
 	public float reloadTime;
 

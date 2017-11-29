@@ -215,6 +215,8 @@ MonoBehaviour:
   speed: 5
   isSelected: 0
   shot: {fileID: 1689273870899288, guid: b2a59d0f9becde043879c8dfb9d0e1c1, type: 2}
+  startHP: 0
+  startHealthBarLength: 0
   occupiedPositions: []
 --- !u!114 &114563312728070382
 MonoBehaviour:
@@ -231,9 +233,12 @@ MonoBehaviour:
   SizeY: 2
   direction: 0
   owner: 0
+  name: Frigate
+  maxhp: 100
   hp: 100
   damage: 20
   reloadTime: 1
+  battleValue: 0
 --- !u!212 &212524404588399052
 SpriteRenderer:
   m_ObjectHideFlags: 1

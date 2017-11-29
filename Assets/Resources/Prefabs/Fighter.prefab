@@ -199,8 +199,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   isSelected: 0
-  occupiedPositions: []
   shot: {fileID: 1689273870899288, guid: b2a59d0f9becde043879c8dfb9d0e1c1, type: 2}
+  startHP: 0
+  startHealthBarLength: 0
+  occupiedPositions: []
 --- !u!114 &114333042233454984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -216,9 +218,12 @@ MonoBehaviour:
   SizeY: 1
   direction: 0
   owner: 0
+  name: Fighter
+  maxhp: 40
   hp: 40
   damage: 4
   reloadTime: 0.5
+  battleValue: 0
 --- !u!212 &212115334360151814
 SpriteRenderer:
   m_ObjectHideFlags: 1

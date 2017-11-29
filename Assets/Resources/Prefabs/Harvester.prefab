@@ -321,6 +321,8 @@ MonoBehaviour:
   speed: 6
   isSelected: 0
   shot: {fileID: 1689273870899288, guid: b2a59d0f9becde043879c8dfb9d0e1c1, type: 2}
+  startHP: 0
+  startHealthBarLength: 0
   occupiedPositions: []
 --- !u!114 &114590914360491036
 MonoBehaviour:
@@ -369,9 +371,12 @@ MonoBehaviour:
   SizeY: 1
   direction: 0
   owner: 0
+  name: Harvester
+  maxhp: 50
   hp: 50
   damage: 0
   reloadTime: 0
+  battleValue: 0
 --- !u!212 &212225028078697416
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -217,6 +217,8 @@ MonoBehaviour:
   SizeY: 2
   direction: 0
   owner: 1
+  name: Enemy Frigate
+  maxhp: 100
   hp: 100
   damage: 20
   reloadTime: 1

@@ -291,14 +291,15 @@ public class GameController : MonoBehaviour {
     {
         //showing sources in the left corner
         GUI.BeginGroup(new Rect(0, 0, 110, 30));
-
-        GUI.Box(new Rect(0, 0, 110, 30), "");
+        Color background = Color.black;
+        background.a = 0.3f;
+        DrawQuad(new Rect(0, 0, Screen.width, Screen.height), background);
         GUI.Label(new Rect(5, 5, 100, 20), spaceStationController.Ore.ToString("0.##") + " Ore");
         GUI.EndGroup();
 
         if (gamePausedByESC)
         {
-            Color background = Color.black;
+            background = Color.black;
             background.a = 0.3f;
             DrawQuad(new Rect(0, 0, Screen.width, Screen.height), background);
             DrawMenu();
@@ -306,13 +307,13 @@ public class GameController : MonoBehaviour {
 
         if (gamePausedByP)
         {
-            Color background = Color.black;
+            background = Color.black;
             background.a = 0.3f;
             DrawQuad(new Rect(0, 0, Screen.width, Screen.height), background);
             GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 25, 200, 50), "Game Paused", guiStyle);
         }
 
-        if (GUI.Button(new Rect(Screen.width - 120, Screen.height / 4 * 3 , 100, 50), "MENU"))
+        if (GUI.Button(new Rect(Screen.width - 120, Screen.height-70, 100, 50), "MENU"))
         {
             Time.timeScale = 0;
             gamePausedByESC = true;
@@ -332,24 +333,24 @@ public class GameController : MonoBehaviour {
             Time.timeScale = 1;
             gamePausedByESC = false;
         }
-        if (GUI.Button(new Rect(50, 140, 200, 50), "Save Game"))
+        /*if (GUI.Button(new Rect(50, 140, 200, 50), "Save Game"))
         {
 
-        }
-        if (GUI.Button(new Rect(50, 200, 200, 50), "Load Game"))
+        }*/
+        /*if (GUI.Button(new Rect(50, 200, 200, 50), "Load Game"))
         {
 
-        }
-        if (GUI.Button(new Rect(50, 260, 200, 50), "Restart Game"))
+        }*/
+        if (GUI.Button(new Rect(50, 260-120, 200, 50), "Restart Game"))
         {
             Application.LoadLevel(1);
             Time.timeScale = 1;
         }
-        if (GUI.Button(new Rect(50, 320, 200, 50), "Main Menu"))
+        if (GUI.Button(new Rect(50, 320-120, 200, 50), "Main Menu"))
         {
             SceneManager.LoadScene(0);
         }
-        if (GUI.Button(new Rect(50, 380, 200, 50), "Exit"))
+        if (GUI.Button(new Rect(50, 380-120, 200, 50), "Exit"))
         {
             Application.Quit();
         }
