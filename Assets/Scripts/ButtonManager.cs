@@ -56,9 +56,9 @@ public class ButtonManager : MonoBehaviour
 
     }
 
-    public void Authors()
+    public void Authors(string sceneName)
     {
-
+        SceneManager.LoadScene(sceneName);
     }
 
     public void ExitGame()
