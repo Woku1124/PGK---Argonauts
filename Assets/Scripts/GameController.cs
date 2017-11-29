@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
@@ -21,8 +22,11 @@ public class GameController : MonoBehaviour {
 	private float InterfaceY;
 	private float InterfaceWidth;
 	private float InterfaceHeight;
+    private bool gamePausedByESC;
+    private bool gamePausedByP;
+    private GUIStyle guiStyle = new GUIStyle();
 
-	private Vector3 startSelectionMousePosition;
+    private Vector3 startSelectionMousePosition;
 	private Vector3 endSelectionMousePosition;
 	private Vector3 startSelectRectanglePosition;
 	private Vector3 endSelectRectanglePosition;
@@ -33,13 +37,17 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		isSelecting = false;
+        gamePausedByESC = false;
+        gamePausedByP = false;
+        isSelecting = false;
         InterfaceX = 300.0f;
 		InterfaceY = 300.0f;
 		InterfaceWidth = 400.0f;
 		InterfaceHeight = 100.0f;
+        guiStyle.fontSize = 20;
+        guiStyle.normal.textColor = Color.white;
 
-    	allUnits = new List<GameObject>();
+        allUnits = new List<GameObject>();
 		enemyUnits = new List<GameObject>();
 
 		lockedPositions = new List<Vector3>();
@@ -94,8 +102,38 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// if left mouse button down
-		if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gamePausedByESC)
+            {
+                Time.timeScale = 1;
+                gamePausedByP = false;
+                gamePausedByESC = false;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                gamePausedByESC = true;
+                gamePausedByP = false;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (gamePausedByP)
+            {
+                Time.timeScale = 1;
+                gamePausedByESC = false;
+                gamePausedByP = false;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                gamePausedByP = true;
+                gamePausedByESC = false;
+            }
+        }
+        // if left mouse button down
+        if (Input.GetMouseButtonDown(0)) {
 			// then start selecting
 			isSelecting = true;
 			// calculationg mouse position in world
@@ -255,54 +293,74 @@ public class GameController : MonoBehaviour {
         GUI.BeginGroup(new Rect(0, 0, 110, 30));
 
         GUI.Box(new Rect(0, 0, 110, 30), "");
-		GUI.Label(new Rect(5, 5, 100, 20), spaceStationController.Ore.ToString("0.##") + " Ore");
+        GUI.Label(new Rect(5, 5, 100, 20), spaceStationController.Ore.ToString("0.##") + " Ore");
         GUI.EndGroup();
 
-		if (spaceStationController.isSelected) {
-            GUI.BeginGroup(new Rect(InterfaceX, InterfaceY, InterfaceWidth, InterfaceHeight));
-
-            GUI.Box(new Rect(0, 0, 400, 100), "Space Station");
-            if (GUI.Button(new Rect(10, 40, 70, 40), "Fr-5 Ore"))
-            {
-				if (spaceStationController.Ore >= 5.0f)
-                {
-					allUnits.Add(GameObject.Instantiate(fighterPrefab, new Vector3(1, 0, 0), Quaternion.identity));
-					spaceStationController.Ore -= 5.0f;
-                }
-            }
-            if (GUI.Button(new Rect(80, 40, 70, 40), "Ft-10 Ore"))
-            {
-				if (spaceStationController.Ore >= 10.0f)
-                {
-					allUnits.Add(GameObject.Instantiate(frigatePrefab, new Vector3(1, 0, 0), Quaternion.identity));
-					spaceStationController.Ore -= 10.0f;
-                }
-            }
-            if (GUI.Button(new Rect(150, 40, 70, 40), "Dt-30 Ore"))
-            {
-				if (spaceStationController.Ore >= 30.0f)
-                {
-					allUnits.Add(GameObject.Instantiate(destroyerPrefab, new Vector3(1, 0, 0), Quaternion.identity));
-					spaceStationController.Ore -= 30.0f;
-                }
-            }
-            if (GUI.Button(new Rect(220, 40, 70, 40), "Hv-1 Ore"))
-            {
-				if (spaceStationController.Ore >= 1.0f)
-                {
-					allUnits.Add(GameObject.Instantiate(harvesterPrefab, new Vector3(1, 0, 0), Quaternion.identity));
-					spaceStationController.Ore -= 1.0f;
-                }
-            }
-
-			GUI.Label(new Rect(300, 40, 50, 40), spaceStationController.Ore.ToString("0.##") + " Ore");
-
-            GUI.EndGroup();
+        if (gamePausedByESC)
+        {
+            Color background = Color.black;
+            background.a = 0.3f;
+            DrawQuad(new Rect(0, 0, Screen.width, Screen.height), background);
+            DrawMenu();
         }
+
+        if (gamePausedByP)
+        {
+            Color background = Color.black;
+            background.a = 0.3f;
+            DrawQuad(new Rect(0, 0, Screen.width, Screen.height), background);
+            GUI.Label(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 25, 200, 50), "Game Paused", guiStyle);
+        }
+
+        if (GUI.Button(new Rect(Screen.width - 120, Screen.height / 4 * 3 , 100, 50), "MENU"))
+        {
+            Time.timeScale = 0;
+            gamePausedByESC = true;
+        }
+
     }
 
-    bool IsMouseOnInterface () {
-        //to do 
-        return true;
+    void DrawMenu()
+    {
+        Color background = Color.black;
+        background.a = 1f;
+        DrawQuad(new Rect(Screen.width / 2 - 150, Screen.height / 2 - 250, 300, 500), background);
+        GUI.BeginGroup(new Rect(Screen.width / 2 - 150, Screen.height / 2 - 250, 300, 500));
+        GUI.Label(new Rect(50, 20, 200, 50), "MENU- Game Paused", guiStyle);
+        if (GUI.Button(new Rect(50, 80, 200, 50), "Return"))
+        {
+            Time.timeScale = 1;
+            gamePausedByESC = false;
+        }
+        if (GUI.Button(new Rect(50, 140, 200, 50), "Save Game"))
+        {
+
+        }
+        if (GUI.Button(new Rect(50, 200, 200, 50), "Load Game"))
+        {
+
+        }
+        if (GUI.Button(new Rect(50, 260, 200, 50), "Restart Game"))
+        {
+            Application.LoadLevel(1);
+            Time.timeScale = 1;
+        }
+        if (GUI.Button(new Rect(50, 320, 200, 50), "Main Menu"))
+        {
+            SceneManager.LoadScene(0);
+        }
+        if (GUI.Button(new Rect(50, 380, 200, 50), "Exit"))
+        {
+            Application.Quit();
+        }
+        GUI.EndGroup();
+    }
+    void DrawQuad(Rect position, Color color)
+    {
+        Texture2D texture = new Texture2D(1, 1);
+        texture.SetPixel(0, 0, color);
+        texture.Apply();
+        GUI.skin.box.normal.background = texture;
+        GUI.Box(position, GUIContent.none);
     }
 }
