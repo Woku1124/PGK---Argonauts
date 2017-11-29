@@ -17,6 +17,8 @@ TagManager:
   - Eunit1
   - Eunit2
   - Eunit3
+  - CapacityBar
+  - Catcher
   layers:
   - Default
   - TransparentFX

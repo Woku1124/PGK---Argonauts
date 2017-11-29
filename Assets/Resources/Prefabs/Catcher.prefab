@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 82503159110941598}
   m_Layer: 0
   m_Name: Catcher
-  m_TagString: Unit
+  m_TagString: Catcher
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,6 +203,7 @@ MonoBehaviour:
   startHP: 0
   startHealthBarLength: 0
   occupiedPositions: []
+  isAlive: 0
 --- !u!114 &114269376735954906
 MonoBehaviour:
   m_ObjectHideFlags: 1

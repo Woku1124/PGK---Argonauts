@@ -69,7 +69,8 @@ public class AsteroidController : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name == "Catcher" && trigger)
+        
+        if (other.gameObject.tag == "Catcher" && trigger)
         {
             gameObject.transform.position = other.transform.position;
         }
