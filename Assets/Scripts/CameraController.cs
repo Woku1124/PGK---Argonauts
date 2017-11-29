@@ -10,6 +10,8 @@ public class CameraController : MonoBehaviour {
 	private int theScreenWidth;
 	private int theScreenHeight;
 	private Camera cam;
+    // margin frame inside the camera view for triggering the scrolling (in pixels)
+    private int mouseScrollOffsetPx = 5;
 
 	void Start() {
 		cam = GetComponent<Camera>();
@@ -28,28 +30,30 @@ public class CameraController : MonoBehaviour {
 
 		float moveCameraHorizontalMouse=0.0f;
 		float moveCameraVerticaMouse = 0.0f;
-		if (Input.mousePosition.x > theScreenWidth - theScreenWidth)
+        // move left
+		if (Input.mousePosition.x < 0 + mouseScrollOffsetPx)
 		{
-			moveCameraHorizontalMouse +=Time.deltaTime;
+            moveCameraHorizontalMouse -= Time.deltaTime;
+		}
+        // move right
+        if (Input.mousePosition.x > theScreenWidth - mouseScrollOffsetPx)
+		{
+            moveCameraHorizontalMouse += Time.deltaTime;
 		}
 
-		if (Input.mousePosition.x < 0 + theScreenWidth)
+        // move down
+        if (Input.mousePosition.y < 0 + mouseScrollOffsetPx)
 		{
-			moveCameraHorizontalMouse -=Time.deltaTime;
+            moveCameraVerticaMouse -= Time.deltaTime;
 		}
-
-		if (Input.mousePosition.y > theScreenHeight - theScreenHeight)
+        // move down
+        if (Input.mousePosition.y > theScreenHeight - mouseScrollOffsetPx)
 		{
-			moveCameraVerticaMouse += Time.deltaTime;
+            moveCameraVerticaMouse += Time.deltaTime;
 		}
-
-		if (Input.mousePosition.y < 0 + theScreenHeight)
-		{
-			moveCameraVerticaMouse -=Time.deltaTime;
-		}
-
-		// moving camera
-		float moveCameraHorizontal = GetKeyToFloat(KeyCode.D) - GetKeyToFloat(KeyCode.A);
+        
+        // moving camera
+        float moveCameraHorizontal = GetKeyToFloat(KeyCode.D) - GetKeyToFloat(KeyCode.A);
 		float moveCameraVertical = GetKeyToFloat(KeyCode.W) - GetKeyToFloat(KeyCode.S);
 		Vector3 translateCamera = new Vector3(moveCameraHorizontal * Time.deltaTime + moveCameraHorizontalMouse, moveCameraVertical * Time.deltaTime +moveCameraVerticaMouse, 0.0f);
 		gameObject.transform.position += translateCamera * moveCameraSpeed * cam.orthographicSize;
