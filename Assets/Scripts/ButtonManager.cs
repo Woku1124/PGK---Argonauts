@@ -8,9 +8,10 @@ public class ButtonManager : MonoBehaviour
 	public GameObject fighterPrefab;
 	public GameObject frigatePrefab;
 	public GameObject destroyerPrefab;
-	public GameObject harvesterPrefab;
+    public GameObject harvesterPrefab;
+    public GameObject catcherPrefab;
 
-	private GameController gameController;
+    private GameController gameController;
 	private StationController spaceStationController;
 
 	void Start () {
@@ -40,11 +41,19 @@ public class ButtonManager : MonoBehaviour
     }
 
     public void CreateHarvester() {
-		if (spaceStationController.Ore >= 3.0f) {
+		if (spaceStationController.Ore >= 10.0f) {
 			gameController.allUnits.Add(GameObject.Instantiate(harvesterPrefab, new Vector3(1, 0, 0), Quaternion.identity));
-			spaceStationController.Ore -= 3.0f;
+			spaceStationController.Ore -= 10.0f;
 		}
 	}
+    public void CreateCatcher()
+    {
+        if (spaceStationController.Ore >= 10.0f)
+        {
+            gameController.allUnits.Add(GameObject.Instantiate(catcherPrefab, new Vector3(1, 0, 0), Quaternion.identity));
+            spaceStationController.Ore -= 10.0f;
+        }
+    }
 
     public void NewGame(string sceneName)
     {

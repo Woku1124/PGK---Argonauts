@@ -9,8 +9,9 @@ public class GameController : MonoBehaviour {
     public GameObject fighterPrefab;
 	public GameObject frigatePrefab;
 	public GameObject destroyerPrefab;
-	public GameObject harvesterPrefab;
-	[HideInInspector]
+    public GameObject harvesterPrefab;
+    public GameObject catcherPrefab;
+    [HideInInspector]
 	public List<GameObject> allUnits;
 	[HideInInspector]
 	public List<Vector3> lockedPositions;
