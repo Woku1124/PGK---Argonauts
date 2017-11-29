@@ -17,6 +17,7 @@ public class AIController : MonoBehaviour {
 	public GameObject destroyerPrefab;
 
 	private bool productionPrepared;
+	private bool changedMode;
 	private int playerBattleValue;
 	private int battleValue;
 	private float lastChangeModeTime;
@@ -28,6 +29,7 @@ public class AIController : MonoBehaviour {
 	private GameObject lastNewUnit;
 	private GameObject station;
 	private GameObject playerStation;
+	private GameObject attackedUnit;
 	private GameController gameController;
 	private PiratesStationController stationController;
 
@@ -39,6 +41,7 @@ public class AIController : MonoBehaviour {
 		lastProductionTime = 0.0f;
 		lastProductSize = 0.0f;
 		productionPrepared = false;
+		changedMode = false;
 		aiMode = AIMode.IDLE;
 		gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		playerStation = GameObject.FindGameObjectWithTag("SpaceStation");
@@ -57,48 +60,75 @@ public class AIController : MonoBehaviour {
 			}
 		}
 
-		if (Time.time - lastChangeModeTime < 3.0f) {
+		if (Time.time - lastChangeModeTime < 1.0f) {
 			return;
 		}
 
 		if ((aiMode == AIMode.OFFENCE || aiMode == AIMode.DEFENCE) && stationController.isUnderAttack) {
 			lastChangeModeTime = Time.time;
+			changedMode = true;
 			aiMode = AIMode.RETREAT;
-			RetreatAction();
+			//RetreatAction();
 			return;
 		}
 
 		if (aiMode == AIMode.IDLE) {
 			if (battleValue >= 10 && battleValue >= 1.2f * playerBattleValue) {
 				lastChangeModeTime = Time.time;
+				changedMode = true;
 				aiMode = AIMode.OFFENCE;
-				OffenceAction();
+				//OffenceAction();
 			} else {
-				GameObject attackedUnit = whoIsAttacked();
+				attackedUnit = whoIsAttacked();
 				if (attackedUnit != null) {
 					lastChangeModeTime = Time.time;
+					changedMode = true;
 					aiMode = AIMode.DEFENCE;
-					DefenceAction(attackedUnit.transform.position);
+					//DefenceAction(attackedUnit.transform.position);
 				}
 			}
 		} else if (aiMode == AIMode.OFFENCE) {
-			OffenceAction();
+			//OffenceAction();
 			if (battleValue <= 0.8f * playerBattleValue) {
 				lastChangeModeTime = Time.time;
+				changedMode = true;
 				aiMode = AIMode.RETREAT;
-				RetreatAction();
+				//RetreatAction();
 			}
 		} else if (aiMode == AIMode.RETREAT) {
 			if (isAnyoneMoving() == false) {
 				lastChangeModeTime = Time.time;
+				changedMode = true;
 				aiMode = AIMode.IDLE;
 			}
 		} else if (aiMode == AIMode.DEFENCE) {
 			if (whoIsAttacked() == null) {
 				lastChangeModeTime = Time.time;
+				changedMode = true;
 				aiMode = AIMode.RETREAT;
-				RetreatAction();
+				//RetreatAction();
 			}
+		}
+	}
+
+	void FixedUpdate () {
+		if (changedMode == false) {
+			return;
+		} else {
+			changedMode = false;
+		}
+
+		if (aiMode == AIMode.RETREAT) {
+			RetreatAction();
+			return;
+		}
+		if (aiMode == AIMode.OFFENCE) {
+			OffenceAction();
+			return;
+		}
+		if (aiMode == AIMode.DEFENCE) {
+			DefenceAction();
+			return;
 		}
 	}
 		
@@ -118,10 +148,10 @@ public class AIController : MonoBehaviour {
 		});
 	}
 
-	void DefenceAction(Vector3 position) {
+	void DefenceAction() {
 		gameController.enemyUnits.ForEach(unit => {
 			if (unit != null) {
-				unit.GetComponent<PiratesFighterController>().CalculateMovement(position);
+				unit.GetComponent<PiratesFighterController>().CalculateMovement(attackedUnit.transform.position);
 			}
 		});
 	}

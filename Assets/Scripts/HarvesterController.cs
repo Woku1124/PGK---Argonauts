@@ -84,6 +84,7 @@ public class HarvesterController : MonoBehaviour
         {
             spaceSpationController.Ore += resource;
             if(resource >0f)
+				// FIXME: trzeba to poprawic, cos nie dziala
                 FloatingTextController.CreatingFloatingText(resource.ToString("0.##"), transform);
             resource = 0.0f;
             canGathering = true;

@@ -338,7 +338,8 @@ MonoBehaviour:
   maxCapacity: 100
   resource: 0
   capacityBar: {fileID: 114435628249507604}
-  resourceBar: {fileID: 0}
+  resourceBar: {fileID: 114765808568501566, guid: a6858276b265d8049a890a4886ede0ac,
+    type: 2}
   capacityCanvas: {fileID: 223481916827487318}
 --- !u!114 &114623067707972654
 MonoBehaviour:

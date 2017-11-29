@@ -222,7 +222,7 @@ MonoBehaviour:
   hp: 100
   damage: 20
   reloadTime: 1
-  battleValue: 2
+  battleValue: 6
 --- !u!212 &212057338661394294
 SpriteRenderer:
   m_ObjectHideFlags: 1

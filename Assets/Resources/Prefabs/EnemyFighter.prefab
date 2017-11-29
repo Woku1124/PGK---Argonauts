@@ -206,7 +206,7 @@ MonoBehaviour:
   hp: 40
   damage: 4
   reloadTime: 0.5
-  battleValue: 1
+  battleValue: 3
 --- !u!114 &114262040070013524
 MonoBehaviour:
   m_ObjectHideFlags: 1
