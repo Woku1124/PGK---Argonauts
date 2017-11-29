@@ -326,6 +326,9 @@ public class ShipController : MonoBehaviour {
         Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y), GetComponent<CircleCollider2D>().radius,filter,hitColliders);
         foreach(var collider in hitColliders)
         {
+			if (collider == null) {
+				return false;
+			}
             if(collider.gameObject == target){ return true; }
         }
         return false;

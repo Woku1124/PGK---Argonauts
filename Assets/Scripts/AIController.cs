@@ -112,6 +112,7 @@ public class AIController : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
+		//Debug.Log("Player: " + playerBattleValue + "   Pirates: " + battleValue);
 		if (changedMode == false) {
 			return;
 		} else {

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114269376735954906}
   - component: {fileID: 50692130958731910}
   - component: {fileID: 58090144160545552}
+  - component: {fileID: 61712849158699126}
   - component: {fileID: 82503159110941598}
   m_Layer: 0
   m_Name: Catcher
@@ -80,6 +81,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8
+--- !u!61 &61712849158699126
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1106597294446648}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.7, y: 0.89}
+    newSize: {x: 3.43, y: 3.83}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1}
+  m_EdgeRadius: 0
 --- !u!82 &82503159110941598
 AudioSource:
   m_ObjectHideFlags: 1
@@ -174,6 +200,8 @@ MonoBehaviour:
   speed: 10
   isSelected: 0
   shot: {fileID: 1689273870899288, guid: b2a59d0f9becde043879c8dfb9d0e1c1, type: 2}
+  startHP: 0
+  startHealthBarLength: 0
   occupiedPositions: []
 --- !u!114 &114269376735954906
 MonoBehaviour:
@@ -190,9 +218,12 @@ MonoBehaviour:
   SizeY: 1
   direction: 0
   owner: 0
+  name: 
+  maxhp: 40
   hp: 40
   damage: 4
   reloadTime: 0.5
+  battleValue: 0
 --- !u!212 &212455645318390396
 SpriteRenderer:
   m_ObjectHideFlags: 1
